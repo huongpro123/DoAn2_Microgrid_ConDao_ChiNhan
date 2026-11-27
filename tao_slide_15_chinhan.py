@@ -9,7 +9,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image
-from pptx.enum.text import PP_ALIGN
+from pptx.dml.color import RGBColor
+from pptx.enum.shapes import MSO_SHAPE
+from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
 from pptx.util import Inches, Pt
 
 if hasattr(sys.stdout, "reconfigure"):
@@ -17,6 +19,7 @@ if hasattr(sys.stdout, "reconfigure"):
 
 ROOT = Path(r"D:\Du an\code\chinhan")
 PPT_TOOLS = Path(r"D:\Tai lieu\second-brain\tools\ppt")
+LOGO_CTUT = Path(r"D:\Tai lieu\second-brain\templates\word\img\logo-ctut.png")
 sys.path.insert(0, str(PPT_TOOLS))
 
 from stage_builder import StageDeck  # noqa: E402
@@ -307,6 +310,109 @@ def add_image_and_notes(deck, kicker, title, img_path, right_title, bullets, sli
     return s
 
 
+def add_ctut_cover(deck):
+    """Slide 01: Slide Bìa CTUT chuẩn sân khấu 16:9 có Logo CTUT, Trường/Khoa, tên đề tài và 4 KPI."""
+    s = deck._new_slide()
+    # Dải nhấn trên cùng + khung header Trường/Khoa với Logo CTUT
+    deck._rect(s, 0.0, 0.0, 13.333, 0.11, deck.t["accent"], rounded=False, name="!!morph_topband")
+    deck._rect(s, 0.68, 0.34, 11.97, 1.18, deck.t["panel"], border_rgb=deck.t["border"], border_pt=1.0)
+    # Huy hiệu nền trắng bo tròn đặt logo CTUT sắc nét trên nền tối
+    deck._rect(s, 0.86, 0.44, 0.98, 0.98, RGBColor(255, 255, 255), border_rgb=deck.t["accent"], border_pt=1.4)
+    if LOGO_CTUT.exists():
+        s.shapes.add_picture(str(LOGO_CTUT), Inches(0.92), Inches(0.50), width=Inches(0.86), height=Inches(0.86))
+    deck._text(s, 2.02, 0.48, 7.30, 0.38, "TRƯỜNG ĐẠI HỌC KỸ THUẬT – CÔNG NGHỆ CẦN THƠ",
+               size=15.5, bold=True, color=deck.t["title"])
+    deck._text(s, 2.02, 0.86, 7.30, 0.34, "KHOA ĐIỆN – ĐIỆN TỬ  ·  NGÀNH CÔNG NGHỆ KỸ THUẬT NĂNG LƯỢNG",
+               size=12, bold=True, color=deck.t["accent"])
+    # Huy hiệu bên phải header
+    deck._rect(s, 9.65, 0.60, 2.78, 0.56, deck.t["panel_hi"], border_rgb=deck.t["accent"],
+               border_pt=1.1, name="!!morph_kicker")
+    deck._text(s, 9.73, 0.70, 2.62, 0.36, "BẢO VỆ ĐỒ ÁN 2 · K2023", size=11.5, bold=True,
+               color=deck.t["accent"], align=PP_ALIGN.CENTER)
+
+    # Khối tiêu đề chính
+    deck._rect(s, 0.68, 1.82, 0.13, 2.22, deck.t["accent"], rounded=False, name="!!morph_bar")
+    deck._text(s, 1.00, 1.80, 11.6, 1.38,
+               "MÔ PHỎNG HỆ THỐNG MICROGRID\nĐẢO ST – GIAI ĐOẠN 3 (CÔN ĐẢO)",
+               size=34, bold=True, color=deck.t["title"])
+    deck._text(s, 1.00, 3.24, 11.4, 0.72,
+               "Tối ưu hóa hệ thống Hybrid PV – Gió – BESS – Diesel trên HOMER Pro x64 v3.18.5\nđạt đồng thời chuẩn kỹ thuật 0,00 % thiếu tải và ≤ 10 % điện dư cắt giảm",
+               size=15, color=deck.t["text"])
+
+    # 4 thẻ KPI nổi bật
+    pills = [
+        ("THIẾU TẢI (UNMET)", "0,00 %", "ok"),
+        ("ĐIỆN DƯ (EXCESS)", "6,15 %", "accent"),
+        ("GIÁ ĐIỆN (LCOE)", "$0,2367/kWh", "warn"),
+        ("GIẢM PHÁT THẢI CO₂", "-2.167,5 t/năm", "ok"),
+    ]
+    cw, gap = 2.81, 0.24
+    for i, (lbl, val, tone) in enumerate(pills):
+        cx = 0.68 + i * (cw + gap)
+        col = deck.t.get(tone, deck.t["accent"])
+        deck._rect(s, cx, 4.34, cw, 1.32, deck.t["panel"], border_rgb=col, border_pt=1.25, name=f"!!morph_kpi_{i}")
+        deck._rect(s, cx, 4.34, cw, 0.08, col, rounded=False)
+        deck._text(s, cx + 0.18, 4.50, cw - 0.36, 0.28, lbl, size=10.5, bold=True, color=deck.t["muted"])
+        deck._text(s, cx + 0.18, 4.84, cw - 0.36, 0.62, val, size=22, bold=True, color=col)
+
+    # Thanh chân bìa trang trọng
+    deck._rect(s, 0.68, 6.08, 11.97, 0.92, deck.t["panel_hi"], border_rgb=deck.t["border"], border_pt=1.0)
+    deck._text(s, 0.92, 6.20, 4.40, 0.32, "SINH VIÊN THỰC HIỆN", size=10, bold=True, color=deck.t["muted"])
+    deck._text(s, 0.92, 6.48, 4.40, 0.38, "Đào Chí Nhân  (KTNL – K2023)", size=13.5, bold=True, color=deck.t["title"])
+    deck._text(s, 5.45, 6.20, 4.20, 0.32, "GIẢNG VIÊN HƯỚNG DẪN", size=10, bold=True, color=deck.t["muted"])
+    deck._text(s, 5.45, 6.48, 4.20, 0.38, "TS. Trần Hữu Tính", size=13.5, bold=True, color=deck.t["accent"])
+    deck._text(s, 9.75, 6.20, 2.68, 0.32, "ĐỊA ĐIỂM & NĂM", size=10, bold=True, color=deck.t["muted"], align=PP_ALIGN.RIGHT)
+    deck._text(s, 9.75, 6.48, 2.68, 0.38, "Cần Thơ, năm 2026", size=13.5, bold=True, color=deck.t["title"], align=PP_ALIGN.RIGHT)
+    return s
+
+
+def add_thank_you_slide(deck, slide_no=16):
+    """Slide 16: Slide Chào & Cảm ơn Hội đồng trang trọng cho phần Q&A."""
+    s = deck._new_slide()
+    deck._rect(s, 0.0, 0.0, 13.333, 0.11, deck.t["accent"], rounded=False, name="!!morph_topband")
+    deck._rect(s, 0.72, 0.48, 11.89, 5.96, deck.t["panel"], border_rgb=deck.t["border"], border_pt=1.1)
+    deck._rect(s, 0.72, 0.48, 11.89, 0.09, deck.t["accent"], rounded=False)
+
+    # Logo CTUT trung tâm trên khung nền trắng sang trọng
+    deck._rect(s, 6.08, 0.84, 1.18, 1.18, RGBColor(255, 255, 255), border_rgb=deck.t["accent"], border_pt=1.5)
+    if LOGO_CTUT.exists():
+        s.shapes.add_picture(str(LOGO_CTUT), Inches(6.16), Inches(0.92), width=Inches(1.02), height=Inches(1.02))
+
+    deck._text(s, 1.10, 2.20, 11.13, 0.34,
+               "TRƯỜNG ĐẠI HỌC KỸ THUẬT – CÔNG NGHỆ CẦN THƠ  ·  KHOA ĐIỆN – ĐIỆN TỬ",
+               size=12, bold=True, color=deck.t["accent"], align=PP_ALIGN.CENTER, name="!!morph_kicker")
+    deck._text(s, 1.00, 2.62, 11.33, 1.25,
+               "TRÂN TRỌNG CẢM ƠN\nQUÝ THẦY/CÔ HỘI ĐỒNG ĐÃ LẮNG NGHE!",
+               size=32, bold=True, color=deck.t["title"], align=PP_ALIGN.CENTER)
+    deck._text(s, 1.30, 3.96, 10.73, 0.50,
+               "Kính mời Quý Thầy/Cô đặt câu hỏi và đóng góp ý kiến để đồ án được hoàn thiện hơn.",
+               size=15.5, color=deck.t["text"], align=PP_ALIGN.CENTER)
+
+    # 3 chip tóm tắt thông điệp chốt nhanh khi đứng Q&A
+    chips = [
+        ("CẤU HÌNH TỐI ƯU", "1.200 kWp PV · 500 kW Gió · 6 MWh BESS", "ok"),
+        ("CHUẨN KỸ THUẬT", "0,00 % Thiếu tải · 6,15 % Điện dư", "accent"),
+        ("HIỆU QUẢ KINH TẾ – XANH", "NPC -40,7 % · Tránh 2.167,5 t CO₂/năm", "warn"),
+    ]
+    cw, gap = 3.56, 0.24
+    start_x = 1.06
+    for i, (lbl, val, tone) in enumerate(chips):
+        cx = start_x + i * (cw + gap)
+        col = deck.t.get(tone, deck.t["accent"])
+        deck._rect(s, cx, 4.76, cw, 1.18, deck.t["panel_hi"], border_rgb=col, border_pt=1.2, name=f"!!morph_kpi_{i}")
+        deck._rect(s, cx, 4.76, 0.08, 1.18, col, rounded=False)
+        deck._text(s, cx + 0.20, 4.90, cw - 0.34, 0.28, lbl, size=10.5, bold=True, color=col)
+        deck._text(s, cx + 0.20, 5.22, cw - 0.34, 0.56, val, size=12.5, bold=True, color=deck.t["title"])
+
+    # Footer riêng
+    deck._text(s, 0.72, 6.70, 9.80, 0.36,
+               "Đào Chí Nhân (KTNL K2023)  ·  GVHD: TS. Trần Hữu Tính  ·  Đồ án 2 – Microgrid Đảo ST",
+               size=11, color=deck.t["muted"])
+    deck._text(s, 11.2, 6.70, 1.40, 0.36, f"{slide_no:02d}", size=11, bold=True,
+               color=deck.t["muted"], align=PP_ALIGN.RIGHT)
+    return s
+
+
 def build_deck():
     c1, c2, c3, c4, c5 = make_charts()
     deck = StageDeck(
@@ -315,23 +421,8 @@ def build_deck():
         author="Đào Chí Nhân",
     )
 
-    # Slide 1: Cover
-    deck.add_cover(
-        badge="ĐỒ ÁN 2 · KHOA ĐIỆN – ĐIỆN TỬ · CTUT 2026",
-        title="MÔ PHỎNG HỆ THỐNG MICROGRID\nĐẢO ST – GIAI ĐOẠN 3 (CÔN ĐẢO)",
-        subtitle="Tối ưu hóa hệ thống Hybrid PV – Gió – BESS – Diesel bằng HOMER Pro x64 v3.18.5 đạt chuẩn kỹ thuật 0,00 % thiếu tải và ≤ 10 % điện dư",
-        meta_items=[
-            "SVTH: Đào Chí Nhân (KTNL K2023)",
-            "GVHD: TS. Trần Hữu Tính",
-            "Trường ĐH Kỹ thuật – Công nghệ Cần Thơ",
-        ],
-        pills=[
-            ("THIẾU TẢI (UNMET)", "0,00 %", "ok"),
-            ("ĐIỆN DƯ (EXCESS)", "6,15 %", "accent"),
-            ("GIÁ ĐIỆN (LCOE)", "$0,2367/kWh", "warn"),
-            ("GIẢM PHÁT THẢI CO₂", "-2.167,5 t/năm", "ok"),
-        ],
-    )
+    # Slide 1: Slide Bìa CTUT có Logo + Trường/Khoa + 4 KPI
+    add_ctut_cover(deck)
 
     # Slide 2: Bối cảnh & Bài toán cấp điện đảo ST
     add_image_and_notes(
@@ -643,7 +734,7 @@ def build_deck():
                 [
                     "Vì sao không chọn 2 × 500 kW gió (NPC thấp nhất)? → Vì điện dư 26,14 % > 10 %.",
                     "Vì sao không chạy 100 % tái tạo? → Mùa lặng gió T4–T5 ép điện dư ≥ 35 % và đội CAPEX.",
-                    "Cảm ơn Quý Thầy/Cô Hội đồng đã lắng nghe! Kính mời góp ý.",
+                    "Chiến lược Load Following: Diesel chỉ bù phần thiếu, nhường sạc BESS cho PV và Gió.",
                 ],
                 "warn",
             ),
@@ -651,9 +742,12 @@ def build_deck():
         slide_no=15,
     )
 
+    # Slide 16: Slide Chào & Cảm ơn Hội đồng
+    add_thank_you_slide(deck, slide_no=16)
+
     deck.save(OUT_PPTX)
     deck.save(OUT_PPTX_ROOT)
-    print(f"SAVED 15 SLIDES -> {OUT_PPTX}")
+    print(f"SAVED 16 SLIDES -> {OUT_PPTX}")
     print(f"SAVED COPY      -> {OUT_PPTX_ROOT}")
 
 
