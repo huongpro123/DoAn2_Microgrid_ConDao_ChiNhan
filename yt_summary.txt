@@ -1,5 +1,0 @@
-Title: Nhóm 7. Báo cáo Năng lượng gió trên phần mềm HOMER Pro
-Author: Thành Khoa Nguyễn
-LengthSeconds: 672
-Description: Lớp năng tái tạo sáng thứ 2
-Caption: vi -> https://www.youtube.com/api/timedtext?v=SRARUkRUzUg&ei=Rp3laq7LMsrh1d8PmOC_qAQ&caps=asr&opi=112496729&exp=xpe&xoaf=5&xowf=1&hl=vi&ip=0.0.0.0&ipbits=0&expire=1793458102&sparams=ip,ipbits,expire,v,ei,caps,opi,exp,xoaf&signature=E6EF883F459F85431E0EA4F10F9BC57DD217FEDE.493CAD9B08F2C7EE7C6F065475B42535D60D599C&key=yt8&kind=asr&lang=vi
