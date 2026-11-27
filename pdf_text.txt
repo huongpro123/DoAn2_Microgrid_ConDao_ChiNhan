@@ -1,0 +1,39 @@
+Phụ tải hiện trạng
+118.1 kW
+Phụ tải CS
+40.0 kW
+Phụ tải KT
+625.0 kW
+ST - Giai đoạn 3
+650Wp x 110
+Biến tần PV
+100kW
+Tủ phân phối hạ thế 12 ngăn - 0,4kV
+MCCB
+200A
+Tua-bin gió
+2.000 kW
+MCCB
+1000A
+650Wp x 109
+Biến tần PV
+100kW
+MCCB
+200A
+650Wp x 109
+Biến tần PV
+100kW
+MCCB
+200A
+Battery
+5.900kWh
+MCCB
+1600A
+Battery
+5.800kWh
+Biến tần tạo
+lưới 1MW
+MCCB
+1600A
+Biến tần tạo
+lưới 1MW

@@ -1,0 +1,8 @@
+Hệ số tải (load factor) ktải = 0,55 (giả định cho phụ tải đảo có tính mùa vụ):
+7.1. Lãi suất chiết khấu thực (r)
+r = (1 + i) / (1 + f) − 1
+Với i = 8%/năm và f = 2%/năm:
+r = (1 + 0,08) / (1 + 0,02) − 1 = 5,88%
+Với r = 5,88%/năm và thời gian dự án N = 25 năm:
+Hệ số tải phụ tải ktải = 0,55;
+Lãi suất danh nghĩa 8%/năm, lạm phát 2%/năm → lãi suất thực r = 5,88%/năm;

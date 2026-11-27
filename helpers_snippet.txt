@@ -1,0 +1,70 @@
+131:         if sub:
+132:             run.text = sub.group(1)
+133:             run.font.subscript = True
+134:         elif sup:
+135:             run.text = sup.group(1)
+136:             run.font.superscript = True
+137:         else:
+138:             run.text = tok
+139: 
+140: def H(text, level=1):
+141:     p = doc.add_heading(text, level=level)
+142:     for run in p.runs:
+143:         run.font.name = 'Times New Roman'
+144:         run.font.color.rgb = RGBColor(0, 0, 0)
+145: 
+146: def P(text, bold=False, italic=False, align=None, size=13):
+147:     p = doc.add_paragraph()
+148:     add_runs(p, text, size=size, italic=italic, bold=bold)
+149:     if align is not None:
+150:         p.alignment = align
+151:     return p
+152: 
+153: def FORMULA(text, size=13):
+154:     p = doc.add_paragraph()
+155:     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+156:     p.paragraph_format.space_before = Pt(2)
+157:     p.paragraph_format.space_after = Pt(2)
+158:     add_runs(p, text, size=size, italic=True)
+159:     return p
+160: 
+161: def CAP(text):
+162:     p = doc.add_paragraph()
+163:     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+164:     add_runs(p, text, size=12, italic=True)
+165:     return p
+166: 
+167: def TBL(headers, rows, widths=None, caption=None):
+168:     if caption:
+169:         p = doc.add_paragraph()
+170:         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+171:         add_runs(p, caption, size=12, bold=True)
+172:     table = doc.add_table(rows=1, cols=len(headers))
+173:     table.style = 'Table Grid'
+174:     table.alignment = WD_TABLE_ALIGNMENT.CENTER
+175:     trPr = table.rows[0]._tr.get_or_add_trPr()
+176:     tblHeader = OxmlElement('w:tblHeader')
+177:     tblHeader.set(qn('w:val'), 'true')
+178:     trPr.append(tblHeader)
+179:     hdr = table.rows[0].cells
+180:     for j, h in enumerate(headers):
+181:         hdr[j].text = ''
+182:         run = hdr[j].paragraphs[0].add_run(h)
+183:         run.font.name = 'Times New Roman'
+184:         run.font.size = Pt(12)
+185:         run.bold = True
+186:         hdr[j].paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+187:     for row in rows:
+188:         cells = table.add_row().cells
+189:         for j, val in enumerate(row):
+190:             cells[j].text = ''
+191:             add_runs(cells[j].paragraphs[0], str(val), size=12)
+192:             if j > 0:
+193:                 cells[j].paragraphs[0].alignment = WD_ALIGN_PARAGRAPH.CENTER
+194:     if widths:
+195:         for j, w in enumerate(widths):
+196:             for row in table.rows:
+197:                 row.cells[j].width = Cm(w)
+198:     last = len(table.rows) - 1
+199:     for ri, row in enumerate(table.rows):
+200:         trPr = row._tr.get_or_add_trPr()

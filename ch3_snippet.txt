@@ -1,0 +1,37 @@
+# ===================== CHUONG 3 =====================
+H('CHƯƠNG 3: MÔ HÌNH HỆ THỐNG TRÊN HOMER PRO', 1)
+
+H('3.1. Kiến trúc mô hình', 2)
+P('HOMER Pro biểu diễn hệ thống microgrid theo kiến trúc thanh cái AC và DC. Trong mô hình ST – Giai đoạn 3:')
+for it in [
+    'Thanh cái AC: kết nối tuabin gió, biến tần PV, biến tần tạo lưới và các nhóm phụ tải AC;',
+    'Thanh cái DC: kết nối các dàn pin mặt trời và hệ thống pin lưu trữ;',
+    'Bộ biến tần tạo lưới (grid-forming inverter) 1 MW × 2 bộ đảm bảo dựng lưới và cân bằng công suất;',
+    'Hệ thống vận hành độc lập, không có phần tử Grid (không nối lưới điện quốc gia).',
+]:
+    p = doc.add_paragraph(it, style='List Bullet')
+    for run in p.runs:
+        run.font.name = 'Times New Roman'; run.font.size = Pt(13)
+
+H('3.2. Thông số các thành phần', 2)
+P('Các thành phần được khai báo với công suất định mức lấy từ sơ đồ: dàn PV tổng 213,2 kWp, '
+  'tuabin gió 2.000 kW, pin lưu trữ 11.700 kWh và biến tần tạo lưới tổng 2.000 kW. '
+  'HOMER Pro sẽ mô phỏng vận hành theo từng giờ trong 8.760 giờ của năm, trên cơ sở đó tổng hợp '
+  'sản lượng, chi phí và các chỉ tiêu kinh tế.')
+
+H('3.3. Chiến lược điều độ', 2)
+P('Hệ thống sử dụng chiến lược điều độ theo chi phí cận biên của HOMER Pro. Với nguồn gió và mặt trời '
+  'chiếm ưu thế, phần lớn thời gian pin được nạp từ nguồn tái tạo dư và xả về phụ tải khi nguồn phát '
+  'suy giảm. Do hệ thống vận hành độc lập, phần điện dư vượt quá khả năng hấp thụ của pin và phụ tải '
+  'sẽ bị cắt giảm (curtailment).')
+
+H('3.4. Ràng buộc hệ thống', 2)
+P('Các ràng buộc kỹ thuật được khai báo để định hình không gian nghiệm gồm: tỷ lệ điện năng không '
+  'được phục vụ tối đa, giới hạn công suất của bộ biến tần và trạng thái sạc tối thiểu của pin. '
+  'Các ràng buộc này đảm bảo mọi phương án được so sánh trong cùng điều kiện vận hành.')
+
+BREAK()
+
+# ===================== CHUONG 4 =====================
+H('CHƯƠNG 4: CƠ SỞ TÍNH TOÁN VÀ CÔNG THỨC', 1)
+

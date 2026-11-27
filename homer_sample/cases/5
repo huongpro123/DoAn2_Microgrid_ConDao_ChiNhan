@@ -1,0 +1,2387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SensitivityCase xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:a="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+  <Cases>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Id="i1">
+          <Name>FuelResources[0].FuelCostSensitivity</Name>
+          <Value i:type="s:decimal">1.4</Value>
+        </DesignCase>
+        <DesignCase z:Id="i2">
+          <Name>WindResources[0].ScaledAnnualAverageSensitivity</Name>
+          <Value i:type="s:decimal">8</Value>
+        </DesignCase>
+      </Cases>
+      <ResultSummary z:Id="i3">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2198290.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2300000</CapitalCost>
+        <Co>1668.52759</Co>
+        <Co2>675966.563</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.336996228</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>473290.719</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>359375.2</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>855526.4</ElectricalProduction>
+            <FuelConsumption>238102.938</FuelConsumption>
+            <FuelCost>333344.1</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8387</HoursOfOperation>
+            <OmCost>20967.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>62160.3438</ElectricalProduction>
+            <FuelConsumption>18593.623</FuelConsumption>
+            <FuelCost>26031.0742</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>979</HoursOfOperation>
+            <OmCost>2447.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10785511</Metric>
+        <NetPresentCost>10785511</NetPresentCost>
+        <Nox>14888.4</Nox>
+        <OmCost>48415</OmCost>
+        <OperatingCost>457352.875</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i4">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i5">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i6">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">4</Value>
+          </DesignCase>
+          <DesignCase z:Id="i7">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i8">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>125.781311</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>46.80077</RenewableFraction>
+        <RenewablePenetration>510.9744</RenewablePenetration>
+        <ResultSummaryId>d69eefd6-7ee9-4256-9924-c78911403cb0</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1357.45862</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>256696.563</TotalFuel>
+        <Uhc>184.821518</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>8.14282E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2300000</CapitalCost>
+            <OmCost>25000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>4</Quantity>
+            <TotalProduction>1280603.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i9">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2198290.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2300000</CapitalCost>
+        <Co>1668.52759</Co>
+        <Co2>675966.563</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.336996228</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>473290.719</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>359375.2</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>855526.4</ElectricalProduction>
+            <FuelConsumption>238102.938</FuelConsumption>
+            <FuelCost>333344.1</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8387</HoursOfOperation>
+            <OmCost>20967.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>62160.3438</ElectricalProduction>
+            <FuelConsumption>18593.623</FuelConsumption>
+            <FuelCost>26031.0742</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>979</HoursOfOperation>
+            <OmCost>2447.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10785511</Metric>
+        <NetPresentCost>10785511</NetPresentCost>
+        <Nox>14888.4</Nox>
+        <OmCost>48415</OmCost>
+        <OperatingCost>457352.875</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i10">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i11">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i12">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">4</Value>
+          </DesignCase>
+          <DesignCase z:Id="i13">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i14">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>125.781311</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>46.80077</RenewableFraction>
+        <RenewablePenetration>510.9744</RenewablePenetration>
+        <ResultSummaryId>25bca07b-f61d-429e-823f-4e6ed25f1ec4</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1357.45862</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>256696.563</TotalFuel>
+        <Uhc>184.821518</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>8.14282E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2300000</CapitalCost>
+            <OmCost>25000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>4</Quantity>
+            <TotalProduction>1280603.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i15">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2198290.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2300000</CapitalCost>
+        <Co>1668.52759</Co>
+        <Co2>675966.563</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.336996228</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>473290.719</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>359375.2</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>855526.4</ElectricalProduction>
+            <FuelConsumption>238102.938</FuelConsumption>
+            <FuelCost>333344.1</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8387</HoursOfOperation>
+            <OmCost>20967.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>62160.3438</ElectricalProduction>
+            <FuelConsumption>18593.623</FuelConsumption>
+            <FuelCost>26031.0742</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>979</HoursOfOperation>
+            <OmCost>2447.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10785511</Metric>
+        <NetPresentCost>10785511</NetPresentCost>
+        <Nox>14888.4</Nox>
+        <OmCost>48415</OmCost>
+        <OperatingCost>457352.875</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i16">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i17">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i18">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">4</Value>
+          </DesignCase>
+          <DesignCase z:Id="i19">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i20">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>125.781311</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>46.80077</RenewableFraction>
+        <RenewablePenetration>510.9744</RenewablePenetration>
+        <ResultSummaryId>cbd7fdb7-3002-4302-86b8-b59af4bc5261</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1357.45862</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>256696.563</TotalFuel>
+        <Uhc>184.821518</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>8.14282E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2300000</CapitalCost>
+            <OmCost>25000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>4</Quantity>
+            <TotalProduction>1280603.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i21">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2198290.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2300000</CapitalCost>
+        <Co>1668.52759</Co>
+        <Co2>675966.563</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.336996228</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>473290.719</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>359375.2</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>855526.4</ElectricalProduction>
+            <FuelConsumption>238102.938</FuelConsumption>
+            <FuelCost>333344.1</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8387</HoursOfOperation>
+            <OmCost>20967.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>62160.3438</ElectricalProduction>
+            <FuelConsumption>18593.623</FuelConsumption>
+            <FuelCost>26031.0742</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>979</HoursOfOperation>
+            <OmCost>2447.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10785511</Metric>
+        <NetPresentCost>10785511</NetPresentCost>
+        <Nox>14888.4</Nox>
+        <OmCost>48415</OmCost>
+        <OperatingCost>457352.875</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i22">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i23">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i24">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">4</Value>
+          </DesignCase>
+          <DesignCase z:Id="i25">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i26">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>125.781311</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>46.80077</RenewableFraction>
+        <RenewablePenetration>510.9744</RenewablePenetration>
+        <ResultSummaryId>3793fc23-ed94-412d-a8b9-e1278c2d15f6</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1357.45862</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>256696.563</TotalFuel>
+        <Uhc>184.821518</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>8.14282E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2300000</CapitalCost>
+            <OmCost>25000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>4</Quantity>
+            <TotalProduction>1280603.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i27">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2198290.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2300000</CapitalCost>
+        <Co>1668.52759</Co>
+        <Co2>675966.563</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.336996228</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>473290.719</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>359375.2</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>855526.4</ElectricalProduction>
+            <FuelConsumption>238102.938</FuelConsumption>
+            <FuelCost>333344.1</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8387</HoursOfOperation>
+            <OmCost>20967.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>62160.3438</ElectricalProduction>
+            <FuelConsumption>18593.623</FuelConsumption>
+            <FuelCost>26031.0742</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>979</HoursOfOperation>
+            <OmCost>2447.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10785511</Metric>
+        <NetPresentCost>10785511</NetPresentCost>
+        <Nox>14888.4</Nox>
+        <OmCost>48415</OmCost>
+        <OperatingCost>457352.875</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i28">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i29">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i30">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">4</Value>
+          </DesignCase>
+          <DesignCase z:Id="i31">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i32">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>125.781311</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>46.80077</RenewableFraction>
+        <RenewablePenetration>510.9744</RenewablePenetration>
+        <ResultSummaryId>2bebb7c1-ab3a-4c42-98fa-03b8b632d03b</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1357.45862</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>256696.563</TotalFuel>
+        <Uhc>184.821518</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>8.14282E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2300000</CapitalCost>
+            <OmCost>25000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>4</Quantity>
+            <TotalProduction>1280603.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i33">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2198290.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2300000</CapitalCost>
+        <Co>1668.52759</Co>
+        <Co2>675966.563</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.336996228</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>473290.719</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>359375.2</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>855526.4</ElectricalProduction>
+            <FuelConsumption>238102.938</FuelConsumption>
+            <FuelCost>333344.1</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8387</HoursOfOperation>
+            <OmCost>20967.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>62160.3438</ElectricalProduction>
+            <FuelConsumption>18593.623</FuelConsumption>
+            <FuelCost>26031.0742</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>979</HoursOfOperation>
+            <OmCost>2447.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10785511</Metric>
+        <NetPresentCost>10785511</NetPresentCost>
+        <Nox>14888.4</Nox>
+        <OmCost>48415</OmCost>
+        <OperatingCost>457352.875</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i34">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i35">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i36">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">4</Value>
+          </DesignCase>
+          <DesignCase z:Id="i37">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i38">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>125.781311</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>46.80077</RenewableFraction>
+        <RenewablePenetration>510.9744</RenewablePenetration>
+        <ResultSummaryId>b452d64e-d6c6-4602-8753-0afba201ebfc</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1357.45862</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>256696.563</TotalFuel>
+        <Uhc>184.821518</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>8.14282E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2300000</CapitalCost>
+            <OmCost>25000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>4</Quantity>
+            <TotalProduction>1280603.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i39">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2198290.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2300000</CapitalCost>
+        <Co>1668.52759</Co>
+        <Co2>675966.563</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.336996228</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>473290.719</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>359375.2</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>855526.4</ElectricalProduction>
+            <FuelConsumption>238102.938</FuelConsumption>
+            <FuelCost>333344.1</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8387</HoursOfOperation>
+            <OmCost>20967.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>62160.3438</ElectricalProduction>
+            <FuelConsumption>18593.623</FuelConsumption>
+            <FuelCost>26031.0742</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>979</HoursOfOperation>
+            <OmCost>2447.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10785511</Metric>
+        <NetPresentCost>10785511</NetPresentCost>
+        <Nox>14888.4</Nox>
+        <OmCost>48415</OmCost>
+        <OperatingCost>457352.875</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i40">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i41">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i42">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">4</Value>
+          </DesignCase>
+          <DesignCase z:Id="i43">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i44">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>125.781311</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>46.80077</RenewableFraction>
+        <RenewablePenetration>510.9744</RenewablePenetration>
+        <ResultSummaryId>04ea4c65-e3de-4f1b-94c0-e525e6c49722</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1357.45862</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>256696.563</TotalFuel>
+        <Uhc>184.821518</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>8.14282E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2300000</CapitalCost>
+            <OmCost>25000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>4</Quantity>
+            <TotalProduction>1280603.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i45">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2198290.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2300000</CapitalCost>
+        <Co>1668.52759</Co>
+        <Co2>675966.563</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.336996228</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>473290.719</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>359375.2</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>855526.4</ElectricalProduction>
+            <FuelConsumption>238102.938</FuelConsumption>
+            <FuelCost>333344.1</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8387</HoursOfOperation>
+            <OmCost>20967.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>62160.3438</ElectricalProduction>
+            <FuelConsumption>18593.623</FuelConsumption>
+            <FuelCost>26031.0742</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>979</HoursOfOperation>
+            <OmCost>2447.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10785511</Metric>
+        <NetPresentCost>10785511</NetPresentCost>
+        <Nox>14888.4</Nox>
+        <OmCost>48415</OmCost>
+        <OperatingCost>457352.875</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i46">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i47">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i48">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">4</Value>
+          </DesignCase>
+          <DesignCase z:Id="i49">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i50">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>125.781311</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>46.80077</RenewableFraction>
+        <RenewablePenetration>510.9744</RenewablePenetration>
+        <ResultSummaryId>0e0bd6a4-58a8-48fa-8da6-fb96287332ac</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1357.45862</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>256696.563</TotalFuel>
+        <Uhc>184.821518</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>8.14282E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2300000</CapitalCost>
+            <OmCost>25000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>4</Quantity>
+            <TotalProduction>1280603.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i51">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2435665.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2800000</CapitalCost>
+        <Co>1521.889</Co>
+        <Co2>616559.2</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.337288946</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>710665.938</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>327791.469</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>784542.3</ElectricalProduction>
+            <FuelConsumption>219074.828</FuelConsumption>
+            <FuelCost>306704.75</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>7899</HoursOfOperation>
+            <OmCost>19747.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>50368.625</ElectricalProduction>
+            <FuelConsumption>15061.9443</FuelConsumption>
+            <FuelCost>21086.7227</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>792</HoursOfOperation>
+            <OmCost>1980</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10794879</Metric>
+        <NetPresentCost>10794879</NetPresentCost>
+        <Nox>13579.9326</Nox>
+        <OmCost>51727.5</OmCost>
+        <OperatingCost>430908.75</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i52">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i53">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i54">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">5</Value>
+          </DesignCase>
+          <DesignCase z:Id="i55">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i56">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>114.72702</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>51.5993652</RenewableFraction>
+        <RenewablePenetration>638.718</RenewablePenetration>
+        <ResultSummaryId>8a49e848-e55d-45ab-9526-65a2e1cfd291</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1238.15833</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>234136.766</TotalFuel>
+        <Uhc>168.578476</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>6.6222583E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2800000</CapitalCost>
+            <OmCost>30000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>5</Quantity>
+            <TotalProduction>1600754.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i57">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2435665.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2800000</CapitalCost>
+        <Co>1521.889</Co>
+        <Co2>616559.2</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.337288946</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>710665.938</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>327791.469</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>784542.3</ElectricalProduction>
+            <FuelConsumption>219074.828</FuelConsumption>
+            <FuelCost>306704.75</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>7899</HoursOfOperation>
+            <OmCost>19747.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>50368.625</ElectricalProduction>
+            <FuelConsumption>15061.9443</FuelConsumption>
+            <FuelCost>21086.7227</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>792</HoursOfOperation>
+            <OmCost>1980</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10794879</Metric>
+        <NetPresentCost>10794879</NetPresentCost>
+        <Nox>13579.9326</Nox>
+        <OmCost>51727.5</OmCost>
+        <OperatingCost>430908.75</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i58">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i59">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i60">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">5</Value>
+          </DesignCase>
+          <DesignCase z:Id="i61">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i62">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>114.72702</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>51.5993652</RenewableFraction>
+        <RenewablePenetration>638.718</RenewablePenetration>
+        <ResultSummaryId>a2f3bc0f-a35d-4bd6-a16e-7688a3eb3965</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1238.15833</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>234136.766</TotalFuel>
+        <Uhc>168.578476</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>6.6222583E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2800000</CapitalCost>
+            <OmCost>30000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>5</Quantity>
+            <TotalProduction>1600754.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i63">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>2435665.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>2800000</CapitalCost>
+        <Co>1521.889</Co>
+        <Co2>616559.2</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.337288946</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>710665.938</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>327791.469</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>784542.3</ElectricalProduction>
+            <FuelConsumption>219074.828</FuelConsumption>
+            <FuelCost>306704.75</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>7899</HoursOfOperation>
+            <OmCost>19747.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>50368.625</ElectricalProduction>
+            <FuelConsumption>15061.9443</FuelConsumption>
+            <FuelCost>21086.7227</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>792</HoursOfOperation>
+            <OmCost>1980</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>10794879</Metric>
+        <NetPresentCost>10794879</NetPresentCost>
+        <Nox>13579.9326</Nox>
+        <OmCost>51727.5</OmCost>
+        <OperatingCost>430908.75</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i64">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i65">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i66">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">5</Value>
+          </DesignCase>
+          <DesignCase z:Id="i67">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i68">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>114.72702</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>51.5993652</RenewableFraction>
+        <RenewablePenetration>638.718</RenewablePenetration>
+        <ResultSummaryId>90ba7cc0-fbbd-4914-9f2e-aa36b6f23b85</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1238.15833</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>234136.766</TotalFuel>
+        <Uhc>168.578476</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>6.6222583E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>2800000</CapitalCost>
+            <OmCost>30000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>5</Quantity>
+            <TotalProduction>1600754.88</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i69">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>1979876.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>1800000</CapitalCost>
+        <Co>1843.0094</Co>
+        <Co2>746653.938</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.339774847</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>254876.828</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>396955.875</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>940524.063</ElectricalProduction>
+            <FuelConsumption>259934.359</FuelConsumption>
+            <FuelCost>363908.125</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8699</HoursOfOperation>
+            <OmCost>21747.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>78899.7656</ElectricalProduction>
+            <FuelConsumption>23605.541</FuelConsumption>
+            <FuelCost>33047.7578</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>1244</HoursOfOperation>
+            <OmCost>3110</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>1.087444E+07</Metric>
+        <NetPresentCost>1.087444E+07</NetPresentCost>
+        <Nox>16445.3145</Nox>
+        <OmCost>44857.5</OmCost>
+        <OperatingCost>489095.031</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i70">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i71">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i72">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">3</Value>
+          </DesignCase>
+          <DesignCase z:Id="i73">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i74">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>138.934555</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>40.9029655</RenewableFraction>
+        <RenewablePenetration>383.2308</RenewablePenetration>
+        <ResultSummaryId>4844838d-6655-44d3-bf4a-4566f8383d28</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1499.41125</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>283539.9</TotalFuel>
+        <Uhc>204.148727</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>8.355983E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>1800000</CapitalCost>
+            <OmCost>20000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>3</Quantity>
+            <TotalProduction>960452.938</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i75">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>1979876.75</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>1800000</CapitalCost>
+        <Co>1843.0094</Co>
+        <Co2>746653.938</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.339774847</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>254876.828</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>396955.875</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>940524.063</ElectricalProduction>
+            <FuelConsumption>259934.359</FuelConsumption>
+            <FuelCost>363908.125</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8699</HoursOfOperation>
+            <OmCost>21747.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>78899.7656</ElectricalProduction>
+            <FuelConsumption>23605.541</FuelConsumption>
+            <FuelCost>33047.7578</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>1244</HoursOfOperation>
+            <OmCost>3110</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>1.087444E+07</Metric>
+        <NetPresentCost>1.087444E+07</NetPresentCost>
+        <Nox>16445.3145</Nox>
+        <OmCost>44857.5</OmCost>
+        <OperatingCost>489095.031</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i76">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i77">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i78">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">3</Value>
+          </DesignCase>
+          <DesignCase z:Id="i79">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i80">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>138.934555</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>40.9029655</RenewableFraction>
+        <RenewablePenetration>383.2308</RenewablePenetration>
+        <ResultSummaryId>2e5b7ba6-1271-4677-8fdb-1311852cc26f</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1499.41125</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>283539.9</TotalFuel>
+        <Uhc>204.148727</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>8.355983E-12</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>1800000</CapitalCost>
+            <OmCost>20000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>3</Quantity>
+            <TotalProduction>960452.938</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i81">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>1810635.63</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>1300000</CapitalCost>
+        <Co>2094.63745</Co>
+        <Co2>848595.3</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.352005482</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>85635.66</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>451152.656</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>1061087.75</ElectricalProduction>
+            <FuelConsumption>289561.938</FuelConsumption>
+            <FuelCost>405386.7</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8759</HoursOfOperation>
+            <OmCost>21897.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>109245.82</ElectricalProduction>
+            <FuelConsumption>32689.98</FuelConsumption>
+            <FuelCost>45765.9727</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>1724</HoursOfOperation>
+            <OmCost>4310</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>1.126588E+07</Metric>
+        <NetPresentCost>1.126588E+07</NetPresentCost>
+        <Nox>18690.6113</Nox>
+        <OmCost>41207.5</OmCost>
+        <OperatingCost>537141.938</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i82">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i83">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i84">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">2</Value>
+          </DesignCase>
+          <DesignCase z:Id="i85">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i86">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>157.903427</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>32.1545677</RenewableFraction>
+        <RenewablePenetration>255.4872</RenewablePenetration>
+        <ResultSummaryId>24dac104-a9a1-4870-944f-2a8a163a66b5</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1704.12732</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>322251.9</TotalFuel>
+        <Uhc>232.021378</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>1.19086963E-11</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>1300000</CapitalCost>
+            <OmCost>15000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>2</Quantity>
+            <TotalProduction>640301.938</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i87">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>1810635.63</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>1300000</CapitalCost>
+        <Co>2094.63745</Co>
+        <Co2>848595.3</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.352005482</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>85635.66</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>451152.656</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>1061087.75</ElectricalProduction>
+            <FuelConsumption>289561.938</FuelConsumption>
+            <FuelCost>405386.7</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8759</HoursOfOperation>
+            <OmCost>21897.5</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>109245.82</ElectricalProduction>
+            <FuelConsumption>32689.98</FuelConsumption>
+            <FuelCost>45765.9727</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>1724</HoursOfOperation>
+            <OmCost>4310</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>true</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>1.126588E+07</Metric>
+        <NetPresentCost>1.126588E+07</NetPresentCost>
+        <Nox>18690.6113</Nox>
+        <OmCost>41207.5</OmCost>
+        <OperatingCost>537141.938</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i88">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i89">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i90">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">2</Value>
+          </DesignCase>
+          <DesignCase z:Id="i91">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i92">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>157.903427</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>32.1545677</RenewableFraction>
+        <RenewablePenetration>255.4872</RenewablePenetration>
+        <ResultSummaryId>afb65d12-ef03-4272-851b-e00ad6d1eb29</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>1704.12732</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>322251.9</TotalFuel>
+        <Uhc>232.021378</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>1.19086963E-11</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings>
+          <a:string>This system has a renewable penetration high enough to cause stability problems that require more detailed modeling.</a:string>
+          <a:string>Adding some form of storage, such as a flywheel or battery bank, may help.</a:string>
+        </Warnings>
+        <WindTurbines>
+          <WindTurbineSummary>
+            <CapitalCost>1300000</CapitalCost>
+            <OmCost>15000</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <OperatingHours>0</OperatingHours>
+            <Quantity>2</Quantity>
+            <TotalProduction>640301.938</TotalProduction>
+          </WindTurbineSummary>
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i93">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>1724999.88</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>0</CapitalCost>
+        <Co>2998.70337</Co>
+        <Co2>1214857.38</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.413010538</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>0</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>645874.563</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>1531331.38</ElectricalProduction>
+            <FuelConsumption>404304.875</FuelConsumption>
+            <FuelCost>566026.8</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8760</HoursOfOperation>
+            <OmCost>21900</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>193668.531</ElectricalProduction>
+            <FuelConsumption>57034.12</FuelConsumption>
+            <FuelCost>79847.7656</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>2794</HoursOfOperation>
+            <OmCost>6985</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>false</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>13218336</Metric>
+        <NetPresentCost>13218336</NetPresentCost>
+        <Nox>26757.66</Nox>
+        <OmCost>28885</OmCost>
+        <OperatingCost>712443.1</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i94">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i95">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i96">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">0</Value>
+          </DesignCase>
+          <DesignCase z:Id="i97">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i98">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>226.0561</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>7.771561E-14</RenewableFraction>
+        <RenewablePenetration>0</RenewablePenetration>
+        <ResultSummaryId>b3280a9f-680e-41d4-a5ec-07381565847b</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>2439.64551</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>461339</TotalFuel>
+        <Uhc>332.164063</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>0</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings />
+        <WindTurbines>
+          <WindTurbineSummary i:nil="true" />
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Id="i99">
+        <AnnualElectricConsumption>1724999.88</AnnualElectricConsumption>
+        <AnnualElectricProduction>1724999.88</AnnualElectricProduction>
+        <AnnualThermalConsumption>0</AnnualThermalConsumption>
+        <AnnualThermalProduction>0</AnnualThermalProduction>
+        <AnnualWorth i:nil="true" />
+        <Boiler i:nil="true" />
+        <BoilerTotalCost>0</BoilerTotalCost>
+        <CapacityShortage>0</CapacityShortage>
+        <CapacityShortageHours>0</CapacityShortageHours>
+        <CapitalCost>0</CapitalCost>
+        <Co>2998.70337</Co>
+        <Co2>1214857.38</Co2>
+        <ControllerCapitalCost>0</ControllerCapitalCost>
+        <ControllerId>HOMER Cycle Charging</ControllerId>
+        <ControllerOmCost>0</ControllerOmCost>
+        <Converter i:nil="true" />
+        <CostOfEnergy>0.413010538</CostOfEnergy>
+        <Customs />
+        <DemandChargeSavings i:nil="true" />
+        <DemandLimits i:nil="true" />
+        <DiscountedPayback i:nil="true" />
+        <DispatchStrategy>CC</DispatchStrategy>
+        <Efficiency1>false</Efficiency1>
+        <Efficiency2>false</Efficiency2>
+        <Electrolyzer i:nil="true" />
+        <EnergyChargeSavings i:nil="true" />
+        <Errors />
+        <ExcessElectricity>0</ExcessElectricity>
+        <ExcessThermalEnergy>0</ExcessThermalEnergy>
+        <Flywheel i:nil="true" />
+        <FuelCost>645874.563</FuelCost>
+        <FuelSavings>0</FuelSavings>
+        <Generators>
+          <GeneratorSummary>
+            <ElectricalProduction>1531331.38</ElectricalProduction>
+            <FuelConsumption>404304.875</FuelConsumption>
+            <FuelCost>566026.8</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>8760</HoursOfOperation>
+            <OmCost>21900</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+          <GeneratorSummary>
+            <ElectricalProduction>193668.531</ElectricalProduction>
+            <FuelConsumption>57034.12</FuelConsumption>
+            <FuelCost>79847.7656</FuelCost>
+            <FuelUnits>L</FuelUnits>
+            <HoursOfOperation>2794</HoursOfOperation>
+            <OmCost>6985</OmCost>
+            <OmDisaggregatedCost>0</OmDisaggregatedCost>
+            <Size>250</Size>
+          </GeneratorSummary>
+        </Generators>
+        <Grid i:nil="true" />
+        <HasCustom />
+        <HasGenerator>
+          <a:boolean>true</a:boolean>
+          <a:boolean>true</a:boolean>
+        </HasGenerator>
+        <HasPV />
+        <HasStorage />
+        <HasUtility />
+        <HasWindTurbine>
+          <a:boolean>false</a:boolean>
+        </HasWindTurbine>
+        <Hydro i:nil="true" />
+        <HydrogenTank i:nil="true" />
+        <Hydrokinetic i:nil="true" />
+        <Infeasible>false</Infeasible>
+        <InternalRateOfReturn i:nil="true" />
+        <Metric>13218336</Metric>
+        <NetPresentCost>13218336</NetPresentCost>
+        <Nox>26757.66</Nox>
+        <OmCost>28885</OmCost>
+        <OperatingCost>712443.1</OperatingCost>
+        <OptimizationDesignCases>
+          <DesignCase z:Id="i100">
+            <Name>Generators[0].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i101">
+            <Name>Generators[1].CapacityOptimization</Name>
+            <Value i:type="s:decimal">250</Value>
+          </DesignCase>
+          <DesignCase z:Id="i102">
+            <Name>WindTurbines[0].QuantityOptimization</Name>
+            <Value i:type="s:int">0</Value>
+          </DesignCase>
+          <DesignCase z:Id="i103">
+            <Name>LoadFancy[1].Efficiency</Name>
+            <Value i:type="s:boolean">false</Value>
+          </DesignCase>
+          <DesignCase z:Id="i104">
+            <Name>Controllers.Current</Name>
+            <Value i:type="s:string">HOMER Cycle Charging</Value>
+          </DesignCase>
+        </OptimizationDesignCases>
+        <PVs />
+        <Pm>226.0561</Pm>
+        <PresentWorth i:nil="true" />
+        <Reformer i:nil="true" />
+        <RenewableFraction>7.771561E-14</RenewableFraction>
+        <RenewablePenetration>0</RenewablePenetration>
+        <ResultSummaryId>5e5b8d9e-e46a-45e6-be11-d05ce909f8bb</ResultSummaryId>
+        <ReturnOnInvestment i:nil="true" />
+        <SimplePayback i:nil="true" />
+        <So2>2439.64551</So2>
+        <Storage />
+        <Tlc i:nil="true" />
+        <TotalFuel>461339</TotalFuel>
+        <Uhc>332.164063</Uhc>
+        <UnmetHydrogenLoad>0</UnmetHydrogenLoad>
+        <UnmetLoad>0</UnmetLoad>
+        <Utility i:nil="true" />
+        <UtilityId i:nil="true" />
+        <UtilitySavings i:nil="true" />
+        <UtilitySavingsTotal i:nil="true" />
+        <Warnings />
+        <WindTurbines>
+          <WindTurbineSummary i:nil="true" />
+        </WindTurbines>
+      </ResultSummary>
+    </OptimizationCase>
+  </Cases>
+  <CategorizedCases>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Ref="i45" />
+    </OptimizationCase>
+    <OptimizationCase>
+      <Cases>
+        <DesignCase z:Ref="i1" />
+        <DesignCase z:Ref="i2" />
+      </Cases>
+      <ResultSummary z:Ref="i99" />
+    </OptimizationCase>
+  </CategorizedCases>
+</SensitivityCase>

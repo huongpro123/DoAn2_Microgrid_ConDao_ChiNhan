@@ -1,0 +1,165 @@
+image1.jpeg:
+    PREV: P44: text="Trong bối cảnh biến đổi khí hậu ngày càng nghiêm trọng và nguồn nhiên liệu hóa thạch dần trở nên cạn kiệt, việc chuyển đổi sang các nguồn năng lượng sạch và bền vững là xu thế tất yếu của các quốc gia trên thế giới, trong đó có Việt Nam. Một trong những hướng đi quan trọng của quá trình chuyển dịch năng lượng chính là phát triển và ứng dụng các nguồn năng lượng tái tạo. Theo Luật Bảo vệ môi trường năm 2014 và các văn bản hướng dẫn hiện hành tại Việt Nam, năng lượng tái tạo được hiểu là năng lượng được khai thác từ các nguồn có khả năng tái tạo một cách tự nhiên và liên tục như mặt trời, gió, nước, sinh khối, địa nhiệt và sóng biển. Đây là những nguồn năng lượng gần như vô tận trong tự nhiên, có khả năng phục hồi nhanh chóng mà không làm cạn kiệt tài nguyên, đồng thời ít gây ra tác động tiêu cực đến môi trường [4]." imgs=[]
+    NEXT: P46: text="Hình . Các nguồn năng lượng tái tạo" imgs=[]
+image2.jpeg:
+    PREV: P55: text="Sự phát triển mạnh mẽ của thị trường điện mặt trời tại Việt Nam trong những năm gần đây phản ánh rõ nét xu thế sử dụng năng lượng tái tạo thay thế cho nguồn nhiên liệu hóa thạch truyền thống. Từ những dự án nhỏ lẻ giai đoạn đầu, đến năm 2023, tổng công suất lắp đặt điện mặt trời của Việt Nam đã vượt mức 18.000 MW, đưa Việt Nam trở thành một trong những quốc gia có tốc độ tăng trưởng điện mặt trời nhanh nhất khu vực Đông Nam Á." imgs=[]
+    NEXT: P57: text="Hình . Các tấm pin năng lượng mặt trời" imgs=[]
+image3.jpeg:
+    PREV: P61: text="Bên cạnh năng lượng mặt trời, năng lượng gió là một trong những nguồn tái tạo đang được khai thác mạnh mẽ tại nhiều quốc gia để hướng tới một hệ thống điện bền vững và thân thiện với môi trường. Năng lượng gió được tạo ra từ chuyển động của các luồng không khí trong khí quyển, nhờ vào sự chênh lệch nhiệt độ giữa các vùng khí hậu trên bề mặt Trái Đất. Tuabin gió - thiết bị chuyển đổi năng lượng động học của gió thành điện năng - là thành phần trung tâm trong các hệ thống điện gió hiện nay. Các cánh quạt của tuabin khi quay sẽ làm quay trục rotor, sinh ra dòng điện thông qua máy phát điện tích hợp bên trong." imgs=[]
+    NEXT: P63: text="Hình . Các trụ tuabin gió" imgs=[]
+image4.jpeg:
+    PREV: P70: text="Tại Việt Nam, thủy điện không chỉ chiếm tỷ trọng lớn trong tổng công suất lắp đặt mà còn đóng vai trò điều tiết công suất cho toàn hệ thống nhờ vào khả năng phản ứng nhanh và dễ kiểm soát. Ngoài ra, do không có sự dao động sản lượng lớn như điện gió hay điện mặt trời, thủy điện được xem là “nguồn tái tạo nền tảng” giúp bù công suất và duy trì ổn định tần số, điện áp trong hệ thống. Đây cũng là lợi thế để thủy điện trở thành “đối tác điều tiết” cho các nguồn năng lượng tái tạo khác khi tích hợp trong microgrid hoặc smart grid." imgs=[]
+    NEXT: P72: text="Hình . Đập thủy điện" imgs=[]
+image5.png:
+    PREV: P89: text="Một hệ thống ESS hiện đại thường đi kèm với hệ thống quản lý năng lượng EMS (Energy Management System) nhằm kiểm soát quá trình sạc và xả điện tối ưu nhất. EMS sẽ sử dụng các thuật toán thông minh để dự đoán nhu cầu tiêu thụ điện, mức độ phát điện từ các nguồn tái tạo, từ đó đưa ra quyết định lưu trữ hay giải phóng năng lượng sao cho hiệu quả kinh tế cao nhất. Việc tích hợp ESS và EMS giúp microgrid hoạt động linh hoạt hơn, giảm chi phí vận hành và nâng cao độ tin cậy của hệ thống." imgs=[]
+    NEXT: P91: text="Hình . Một hệ thống ESS lưu trữ năng lượng mặt trời và năng lượng gió" imgs=[]
+image6.png:
+    PREV: P108: text="Homer Pro là phần mềm mô phỏng hệ thống năng lượng hỗn hợp (Hybrid Energy System) được sử dụng phổ biến trong nghiên cứu và thiết kế các mô hình microgrid. Giao diện của chương trình thân thiện, trực quan, hỗ trợ người dùng phân tích khả năng vận hành, tối ưu chi phí và cấu hình của hệ thống năng lượng gồm các nguồn như năng lượng mặt trời, gió, diesel, acquy, lưới điện… Khi chạy mô phỏng phần mềm sẽ đưa ra nhiều kịch bản khác nhau để tìm ra phương án tối ưu nhất về mặt kỹ thuật và kinh tế." imgs=[]
+    NEXT: P110: text="Hình . Giao diện khi vào phần mềm" imgs=[]
+image7.png:
+    PREV: P110: text="Hình . Giao diện khi vào phần mềm" imgs=[]
+    NEXT: P112: text="Khởi động phần mềm" imgs=[]
+image8.png:
+    PREV: P116: text="- Chọn File > New để tạo một dự án mới." imgs=[]
+    NEXT: P118: text="Hình . Tạo một dự án mới" imgs=[]
+image9.png:
+    PREV: P119: text="- Nhập tên cho dự án và chọn vị trí lưu trữ." imgs=[]
+    NEXT: P121: text="Hình . Đặt tên và chọn vị trí lưu file dự án" imgs=[]
+image10.png:
+    PREV: P123: text="- Trong màn hình Project Settings: nhập thông tin dự án: tên, mô tả, vị trí địa lý (qua bản đồ hoặc toạ độ), đơn vị đo lường." imgs=[]
+    NEXT: P125: text="Hình . Xác định vị trí địa lý nơi nghiên cứu của dự án" imgs=[]
+image11.png:
+    PREV: P126: text="- Chọn tab Load." imgs=[]
+    NEXT: P128: text="Hình . Thanh công cụ phụ tải" imgs=[]
+image12.png:
+    PREV: P130: text="- Đặt tên tải, ví dụ: Primary Load." imgs=[]
+    NEXT: P132: text="Hình . Thêm và đặt tên cho phụ tải" imgs=[]
+image13.png:
+    PREV: P133: text="- Nhập điện năng tiêu thụ 24 giờ hoặc theo mẫu (Template). Sau đó nhấn OK để lưu cấu hình tải." imgs=[]
+    NEXT: P135: text="Hình . Nhập dữ liệu phụ tải 24h của nơi nghiên cứu" imgs=[]
+image14.png:
+    PREV: P139: text="+ Thêm Grid hoặc Generator nếu cần." imgs=[]
+    NEXT: P141: text="Hình . Thanh công cụ các nguồn phát điện" imgs=[]
+image15.png:
+    PREV: P145: text="- Nhập thông số công suất lắp đặt, giá thành thiết bị, chi phí bảo trì, vòng đời, hiệu suất tấm pin." imgs=[]
+    NEXT: P147: text="Hình . Nhập thông số cho tấm pin năng lượng mặt trời" imgs=[]
+image16.png:
+    PREV: P148: text="- Tại tab Resources, chọn dữ liệu bức xạ mặt trời và nhập dữ liệu vào." imgs=[]
+    NEXT: P150: text="Hình . Nhập dữ liệu nguồn bức xạ mặt trời" imgs=[]
+image17.png:
+    PREV: P162: text="- Kết quả mô phỏng sẽ phản ánh sự kết hợp tối ưu giữa các nguồn năng lượng dựa trên chi phí, hiệu suất và giới hạn kỹ thuật đã thiết lập." imgs=[]
+    NEXT: P164: text="- Nhấn nút Calculate ở góc trên phải màn hình." imgs=[]
+image18.png:
+    PREV: P166: text="- Sau khi mô phỏng xong, chuyển sang tab Results." imgs=[]
+    NEXT: P168: text="Hình . Chọn mục Results để xem kết quả" imgs=[]
+image19.png:
+    PREV: P169: text="- Xem biểu đồ dòng tiền, chi phí vòng đời, sản lượng năng lượng, tỷ lệ sử dụng các nguồn." imgs=[]
+    NEXT: P171: text="Hình . Màn hình kết quả của Homer pro" imgs=[]
+image20.png:
+    PREV: P172: text="Ngoài có thể chọn thẻ table ở màn hình kết quả của phần mềm, ở đây có thể xem một số cấu hình tối ưu được đề xuất. Để xem chi tiết về kinh tế và kỹ thuật của một cấu hình, chọn đúp chuột trái vào dòng của cấu hình đó để xem cụ thể." imgs=[]
+    NEXT: P174: text="Hình . Chọn thẻ table để xem các cấu hình khác" imgs=[]
+image21.png:
+    PREV: P226: text="Huyện Ngọc Hiển là một huyện ven biển thuộc tỉnh Cà Mau, nằm ở cực nam của Việt Nam, có tọa độ địa lý xấp xỉ trong khoảng 8°33′-8°58′ vĩ Bắc và 104°43′-105°10′ kinh Đông; khu vực trung tâm hành chính nằm gần 8,7°B; 104,95°Đ. Huyện có diện tích khoảng 1.200 km² và bao gồm nhiều xã đảo, trong đó có những khu vực tiếp giáp với biển Đông và cửa sông, tạo nên các cảnh quan tự nhiên phong phú. Dân số của huyện Ngọc Hiển vào khoảng hơn 160.000 người (khoảng 40.000 hộ), sinh sống chủ yếu tại các khu vực ven biển và các xã đảo. Hệ thống giao thông của huyện chủ yếu dựa vào đường thủy, với nhiều tuyến sông và cảng biển. Huyện hiện đối mặt với nhiều khó khăn trong việc cung cấp điện ổn định, do hệ thống lưới điện truyền tải gặp trở ngại về mặt kỹ thuật và chi phí. Các khu vực xa xôi, đặc biệt là các xã đảo, thường xuyên gặp tình trạng mất điện do sự cố lưới điện hoặc điều kiện thời tiết khắc nghiệt.[9]" imgs=[]
+    NEXT: P228: text="Hình . Vị trí địa lý huyện Ngọc Hiển" imgs=[]
+image22.png:
+    PREV: P231: text="Đối với huyện Ngọc Hiển, do đã có hạ tầng lưới điện quốc gia nên phương án vận hành nối lưới là phù hợp nhất. Hệ thống microgrid tại đây được thiết kế theo mô hình lai, tích hợp đồng thời điện mặt trời, điện gió và máy phát điện sinh khối. Các tấm pin quang điện khai thác bức xạ mặt trời vào ban ngày, trong khi các tuabin gió tận dụng nguồn gió dồi dào vào những tháng cuối năm. Bên cạnh đó, cụm máy phát sinh khối sử dụng nhiên liệu tái tạo từ phụ phẩm nông - lâm - thủy sản và chất thải hữu cơ địa phương đóng vai trò như nguồn dự phòng linh hoạt, có thể phát điện ổn định khi công suất gió và mặt trời suy giảm. Điện năng từ các nguồn tái tạo được hòa lưới thông qua bộ chuyển đổi và hệ thống quản lý năng lượng, giúp điều phối tối ưu giữa nguồn nội bộ, pin lưu trữ và lưới điện chính. Cách kết hợp này không chỉ tăng tỷ lệ năng lượng sạch trong cung cấp điện cho phụ tải mà còn tạo điều kiện tận dụng nguồn sinh khối sẵn có tại địa phương, giảm chi phí nhiên liệu hóa thạch và phát thải CO₂. Microgrid vừa chủ động khai thác nguồn gió, mặt trời và sinh khối tại chỗ, vừa trao đổi công suất linh hoạt với lưới chính để bảo đảm độ tin cậy và hiệu quả kinh tế. Chính sách vận hành này bám sát bản chất của microgrid hiện đại là có thể làm việc ở chế độ nối lưới hoặc tách lưới khi cần, đóng vai trò một “đơn vị điều khiển được” trước lưới điện lớn, nhờ đó nâng cao tính linh hoạt và hiệu quả cung cấp điện sạch, tin cậy cho phụ tải địa phương." imgs=[]
+    NEXT: P233: text="Hình . Sơ đồ tổng quan hệ thống cho huyện Ngọc Hiển" imgs=[]
+image23.png:
+    PREV: P234: text="Dữ liệu về bức xạ năng lượng mặt trời và tiềm năng tài nguyên gió tại huyện Ngọc Hiển được thể hiện thông qua hai hình dưới đây, phản ánh một cách trực quan và chi tiết điều kiện tự nhiên thuận lợi của khu vực cho việc khai thác năng lượng tái tạo. Các số liệu bức xạ mặt trời cho thấy khu vực có cường độ bức xạ tương đối cao và ổn định theo các mùa trong năm, tạo tiền đề vững chắc cho việc phát triển hệ thống điện mặt trời với hiệu suất cao. Song song đó, dữ liệu về tốc độ và mật độ năng lượng gió cho thấy Ngọc Hiển sở hữu nguồn gió dồi dào, đặc biệt vào những tháng cao điểm gió mùa, giúp nâng cao khả năng khai thác điện gió một cách liên tục và hiệu quả. Việc phân tích kết hợp hai nguồn tài nguyên này không chỉ chứng minh tiềm năng to lớn của huyện Ngọc Hiển trong phát triển microgrid tích hợp năng lượng tái tạo." imgs=[]
+    NEXT: P236: text="Hình . Bức xạ năng lượng mặt trời tại huyện Ngọc Hiển" imgs=[]
+image24.png:
+    PREV: P236: text="Hình . Bức xạ năng lượng mặt trời tại huyện Ngọc Hiển" imgs=[]
+    NEXT: P238: text="Hình . Tốc độ gió trung bình trong năm của huyện Ngọc Hiển" imgs=[]
+image25.png:
+    PREV: P243: text="Sản lượng rác thải sinh khối tại huyện Ngọc Hiển có sự phân bố không đồng đều trong năm, thể hiện rõ tính mùa vụ. Vào các tháng đầu và cuối năm, đặc biệt là tháng 10 đến tháng 12, khối lượng rác hữu cơ có xu hướng` tăng cao hơn mức trung bình do trùng với thời điểm khai thác, chế biến thủy sản và nhu cầu tiêu dùng tăng. Ngược lại, vào khoảng giữa năm (tháng 4 đến tháng 6) sản lượng rác giảm xuống, phản ánh giai đoạn hoạt động kinh tế - xã hội ít sôi động hơn. Các tháng còn lại duy trì mức rác thải tương đối ổn định, dao động quanh giá trị trung bình năm. Quy luật này cho thấy nguồn sinh khối phục vụ phát điện tại địa phương mang tính ổn định. Việc mô phỏng đặc điểm biến động này trong Homer pro giúp phản ánh sát thực tế hơn tiềm năng cung cấp nhiên liệu sinh khối, đồng thời là cơ sở quan trọng để tối ưu lịch phát điện của hệ thống microgrid." imgs=[]
+    NEXT: P245: text="Hình . Sản lượng Biomass trung bình trong năm của huyện Ngọc Hiển" imgs=[]
+image26.png:
+    PREV: P258: text="Bảng . Công suất tiêu thụ của phụ tải 24h tại huyện Ngọc Hiển" imgs=[]
+    NEXT: P261: text="Hình . Đồ thị phụ tải của huyện Ngọc Hiển" imgs=[]
+image27.png:
+    PREV: P264: text="Các hình ảnh sau đây thể hiện cụ thể thông số kỹ thuật của từng thiết bị." imgs=[]
+    NEXT: P266: text="Hình . Thông số của tấm pin mặt trời" imgs=[]
+image28.png:
+    PREV: P266: text="Hình . Thông số của tấm pin mặt trời" imgs=[]
+    NEXT: P268: text="Hình . Thông số của tuabin gió" imgs=[]
+image29.png:
+    PREV: P268: text="Hình . Thông số của tuabin gió" imgs=[]
+    NEXT: P270: text="Hình . Các chỉ số của máy phát biogas" imgs=[]
+image30.png:
+    PREV: P270: text="Hình . Các chỉ số của máy phát biogas" imgs=[]
+    NEXT: P272: text="Hình . Thông số kỹ thuật của bộ Converter" imgs=[]
+image31.png:
+    PREV: P273: text="Sau khi thiết lập các thông số phụ tải cùng với các nguồn phát, thực hiện mô phỏng trên Homer pro. Phần mềm sẽ tính toán và đưa ra một số cấu hình, mỗi cấu hình sẽ có kết quả chi tiết về các khoản phí như vồn đầu tư, các chi phí bảo dưỡng thay thế, chi phí cả vòng đời 25 năm, kèm theo đó là các thông số kỹ thuật của nguồn phát và lượng phát thải hằng năm. Từ các yếu tố này sẽ giúp phân tích đánh giá và lựa chọn được hệ thống phù hợp với mong muốn để đầu tư cho địa bàn huyện Ngọc Hiển." imgs=[]
+    NEXT: P275: text="Hình . Màn hình kết quả của các cấu hình đề xuất cho huyện Ngọc Hiển" imgs=[]
+image32.png:
+    PREV: P277: text="Hệ thống chỉ có điện gió hòa lưới" imgs=[]
+    NEXT: P279: text="Hình . Cấu hình chỉ có tuabin gió và điện lưới" imgs=[]
+image33.png:
+    PREV: P285: text="Qua kết quả thống kê về sản lượng điện sản xuất và tiêu thụ trong năm, thì tỷ lệ điện gió cung cấp cho tải chiếm đến 91% và phần lớn là sẽ bán lại cho lưới điện chiếm 64%. Kết quả cho thấy nguồn gió tại huyện Ngọc Hiển là điều kiện đầu tư rất tiềm năng." imgs=[]
+    NEXT: P287: text="Hình . Biểu đồ sản lượng điện của hệ thống ở các tháng trong năm" imgs=[]
+image34.png:
+    PREV: P287: text="Hình . Biểu đồ sản lượng điện của hệ thống ở các tháng trong năm" imgs=[]
+    NEXT: P289: text="Hình . Biến thiên công suất của hệ thống vào các ngày tháng 8/2025" imgs=[]
+image35.png:
+    PREV: P294: text="Theo kết quả của hai bảng trên, hệ số công suất đạt gần 43% so với công suất tối đa cho thấy tuabin gió hoạt động hiệu quả. Cùng với tỷ lệ thâm nhập điện gió lên đến 253%, chứng tỏ sản lượng điện gió tạo ra lớn hơn nhiều so với phụ tải và phần dư được bán cho lưới điện." imgs=[]
+    NEXT: P296: text="Hình . Công suất phát của tuabin gió theo ngày trong năm" imgs=[]
+image36.png:
+    PREV: P296: text="Hình . Công suất phát của tuabin gió theo ngày trong năm" imgs=[]
+    NEXT: P298: text="Hình . Sản lượng điện bán lại cho lưới trong năm" imgs=[]
+image37.png:
+    PREV: P301: text="Hệ thống gồm điện gió và điện mặt trời hòa lưới" imgs=[]
+    NEXT: P303: text="Hình . Cấu hình gồm điện gió và điện mặt trời có nối lưới" imgs=[]
+image38.png:
+    PREV: P309: text="Dựa trên kết quả về điện năng trong năm, điện gió với được đầu tư với công suất lớn cho ra sản lượng điện chiểm 94% trên tổng số, khai thác tối đa nguồn tài nguyên gió tại khu vực. Điện mặt trời có đóng góp trong năm rất thấy chỉ 0,0291%. Lượng điện tạo ra lớn hơn nhiều lần so với phụ tải, nên phần lớn lượng điện được bán lên lưới chiếm 72,6%." imgs=[]
+    NEXT: P311: text="Hình . Biểu đồ sản lượng điện của hệ thống ở các tháng trong năm" imgs=[]
+image39.png:
+    PREV: P311: text="Hình . Biểu đồ sản lượng điện của hệ thống ở các tháng trong năm" imgs=[]
+    NEXT: P313: text="Hình . Biến thiên công suất của hệ thống vào các ngày tháng 8/2025" imgs=[]
+image40.png:
+    PREV: P318: text="Điện mặt trời trong cấu hình này có công suất không cao, nên tỷ lệ thâm nhập chỉ là 0,106%, chi phí điện quy dẫn cũng cao hơn các nguồn khác. Nên vì vậy nguồn này có vai trò như hỗ trợ cho lưới điện chưa phải là nguồn phát chính." imgs=[]
+    NEXT: P320: text="Hình . Công suất phát trong năm của điện mặt trời" imgs=[]
+image41.png:
+    PREV: P323: text="Với tổng công suất gần 200 MW, cùng với tài nguyên gió dồi dào tại huyện Ngọc Hiển. Mỗi năm điện gió cho ra sản lượng điện lớn vượt xa nhu cầu của phụ tải, phần lớn là được bán cho lưới điện. Thời gian vận hành gần như xuyên suốt quanh năm với 7.192 giờ/năm, cho thấy điện gió là nguồn phát chủ lực ở cấu hình này. Biểu đồ bên dưới thể hiện công suất phát luôn đạt mức trung bình cao trong một năm hoạt động." imgs=[]
+    NEXT: P325: text="Hình . Công suất phát của tuabin gió ngày trong năm" imgs=[]
+image42.png:
+    PREV: P325: text="Hình . Công suất phát của tuabin gió ngày trong năm" imgs=[]
+    NEXT: P327: text="Hình . Sản lượng điện bán lên lưới trong năm" imgs=[]
+image43.png:
+    PREV: P330: text="Bộ converter chỉ hoạt động ở chế độ nghịch lưu để chuyển đổi điện DC của điện mặt trời thành AC hòa lên lưới. Do chỉ chuyển đổi cho điện mặt trời nên thời gian hoạt động trong năm của converter chỉ là 4.380 giờ/năm, hệ số công suất cũng chỉ ở mức tương đối 34,7%. Thời gian vận hành của converter trong ngày là từ 6h-18h, lúc mà tấm pin mặt trời phát điện nhờ bức xạ mặt trời, biểu đồ bên dưới minh chứng cho điều này." imgs=[]
+    NEXT: P332: text="Hình . Công suất phát của converter ngày trong năm" imgs=[]
+image44.png:
+    PREV: P335: text="Hệ thống gồm điện gió, PV, BESS và máy phát biogas có nối lưới" imgs=[]
+    NEXT: P337: text="Hình . Cấu hình điện gió, điện gió và máy phát biogas hòa lưới" imgs=[]
+image45.png:
+    PREV: P343: text="Kết quả mô phỏng ở trường hợp này thì tuabin gió vẫn là một nguồn phát có sản lượng lớn trong năm với mức 747.707.322 kWh/năm, chiểm tổng số 92,8% toàn hệ thống. Nguồn điện mặt trời giống như một nguồn phát phụ trợ sẵn tận dụng được nguồn tài nguyên bức xạ mặt trời tại địa phương với sản lượng 231.322 kWh/năm. Số sản lượng và tỉ lệ của máy phát biogas, thể hiện máy chỉ vận hành ở một số trường hợp thật sự cần thiết khi mà nhu cầu phụ tải cao hơn mức bình thường hoặc thiếu hụt nguồn phát. Biểu đồ bên dưới phản ánh rõ sản lượng điện của từng thành phần trong hệ thống trong năm." imgs=[]
+    NEXT: P345: text="Hình . Sản lượng của hệ thống trong năm" imgs=[]
+image46.png:
+    PREV: P345: text="Hình . Sản lượng của hệ thống trong năm" imgs=[]
+    NEXT: P347: text="Hình . Biến thiên công suất của hệ thống vào các ngày tháng 8/2025" imgs=[]
+image47.png:
+    PREV: P352: text="Điện gió ở cấu hình này vẫn là một nguồn phát chiếm tỉ lệ lớn, với sản lượng đạt 747.707.322 kWh/năm cung cấp phần lớn phụ tải tại khu vực. Nhờ nguồn tài nguyên gió dồi dào, giúp cho tuabin hoạt động gần như liên tục và công suất phát đa phần ở mức trung bình cao trong năm." imgs=[]
+    NEXT: P354: text="Bảng . Thông số kỹ thuật của tấm pin năng lượng mặt trời" imgs=[]
+image48.png:
+    PREV: P356: text="Về điện mặt trời của cấu hình, công suất khai thác thực tế thấp hơn nhiều so với công suất định mức, thể hiện qua hệ số công suất không cao. Điều này là do sự phụ thuộc lớn vào điều kiện bức xạ và thời tiết. Sản lượng điện tạo ra ổn định theo ngày, nhưng thời gian vận hành trong năm bị giới hạn do chỉ phát điện vào ban ngày." imgs=[]
+    NEXT: P358: text="Hình . Công suất phát của điện mặt trời trong năm" imgs=[]
+image49.png:
+    PREV: P362: text="Các thông số trên cho thấy máy phát biogas có số giờ vận hành không cao nhưng số lần khởi động nhiều, do chỉ được huy động theo nhu cầu phụ tải hoặc dự phòng. Công suất phát điện trung bình gần bằng công suất định mức, chứng tỏ máy phát được sử dụng một cách hiệu quả. Sản lượng điện hàng năm đạt 20.685.951 kWh/năm, góp phần tận dụng hiệu quả nguồn năng lượng tái tạo tại chỗ." imgs=[]
+    NEXT: P364: text="Hình . Công phát của máy phát biogas trong năm" imgs=[]
+image50.png:
+    PREV: P367: text="Trong suốt năm, converter vận hành ổn định nhưng chỉ khai thác một phần công suất định mức, dẫn đến hệ số công suất chỉ đạt 34,7%. Mặc dù vẫn có tổn thất điện năng nhưng không quá lớn. Thời gian làm việc của converter chủ yếu từ 6-18h khi mà nguồn điện mặt trời phát điện." imgs=[]
+    NEXT: P369: text="Hình . Công suất phát của converter ngày trong năm" imgs=[]
+image51.png:
+    PREV: P369: text="Hình . Công suất phát của converter ngày trong năm" imgs=[]
+    NEXT: P371: text="Hình . Sản lượng điện bán lên lưới trong năm" imgs=[]
+image52.png:
+    PREV: P374: text="So sánh kết quả của các trường hợp" imgs=[]
+    NEXT: P376: text="Hình . So sánh hiệu quả kinh tế và môi trường giữa các trường hợp" imgs=[]
+image53.png:
+    PREV: P378: text="Đối với cấu hình chỉ có điện gió nối lưới, đây là cấu hình có vốn đầu tư thấp nhất trong ba cấu hình so sánh. Nhờ nguồn gió tại khu vực huyện Ngọc Hiển dồi dào nên các tuabin phát điện gần như liên tục trong năm với mức công suất trung bình cao. Tuy là có lúc thiếu hụt do phụ thuộc nguồn gió phải dùng điện lưới và chịu phát thải, nhưng đây là một dự án phù hợp khi có vốn đầu tư thấp." imgs=[]
+    NEXT: P380: text="Hình . Lũy kế so sánh lũy kế chi phí điện gió và điện lưới trong vòng đời hệ thống (25 năm)" imgs=[]
+image54.png:
+    PREV: P381: text="Ở cấu hình điện gió và điện mặt trời, thì sẽ có thêm hệ thống pin năng lượng mặt trời vừa khai thác nguồn bức xạ mặt trời, vừa giúp tăng động tin cập cung cấp điện của hệ thống. Từ đó mà hệ thống sẽ giảm mức mua điện từ điện lưới, đồng thời sẽ giảm luôn mức phát thải CO2 tương ứng từ nguồn điện mua từ lưới. Nếu muốn cấu hình giảm mức điện năng mua từ lưới thì đây là một cấu hình hợp lý để đầu tư." imgs=[]
+    NEXT: P383: text="Hình . Lũy kế so sánh lũy kế chi phí điện gió kết hợp điện mặt trời đối với điện lưới trong vòng đời hệ thống (25 năm)" imgs=[]
+image55.png:
+    PREV: P384: text="Còn lại là cấu hình gồm nhiều nguồn phát như điện gió, điện mặt trời, máy phát biogas. Có mức vốn đầu tư khá cao nhưng đổi lại sẽ giảm được lượng lớn khí CO2, do sử dụng kết hợp nhiều nguồn năng lượng tái tạo. Việc sử dụng kết hợp nhiều nguồn phát sẽ giúp khai thác tối đa nguồn tài nguyên tại khu vực, bên cạnh đó cũng tăng độ ổn định và độ tin cậy cấp điện. Cấu hình này rất đáng đầu tư với nhiều lợi ích mà nó mang lại, nếu chấp nhận mức giá đầu tư ban đầu của cấu hình này." imgs=[]
+    NEXT: P386: text="Hình . Lũy kế so sánh lũy kế chi phí điện microgrid và điện lưới trong vòng đời hệ thống (25 năm)" imgs=[]

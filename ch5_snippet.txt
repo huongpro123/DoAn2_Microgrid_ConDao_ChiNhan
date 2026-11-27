@@ -1,0 +1,25 @@
+    ],
+    widths=[7.0, 3.5, 5.5], caption='Bảng 5.6. Kết quả các chỉ tiêu kinh tế')
+
+H('5.6. Kết quả mô phỏng HOMER Pro và nhận xét', 2)
+P('Kết quả chạy mô phỏng trên HOMER Pro với các thông số đầu vào như trên cho thấy hệ thống '
+  'có khả năng cấp điện ổn định cho toàn bộ phụ tải nhờ sự kết hợp của nguồn gió, nguồn mặt trời '
+  'và hệ thống pin lưu trữ. Sản lượng điện gió và mặt trời vượt nhu cầu phụ tải, phần dư được '
+  'nạp vào pin và một phần bị cắt giảm do hệ thống vận hành độc lập.')
+P('Chi phí điện quy dẫn (COE) của hệ thống ở mức khoảng %s VNĐ/kWh, phụ thuộc chủ yếu vào vốn đầu tư '
+  'tuabin gió và hệ pin lưu trữ. Chi phí vòng đời NPC khoảng %s triệu VNĐ (tương đương %s tỷ VNĐ). '
+  'Thời gian hoàn vốn đơn giản khoảng %s năm (so với phương án cấp điện bằng diesel với giá khoảng '
+  '12.000 VNĐ/kWh).' % (vn(COE, 0), vn(NPC, 0), vn(NPC / 1000, 2), vn(payback, 2)))
+P('So với hệ thống nối lưới, chi phí điện của hệ đảo độc lập cao hơn do phải đầu tư dung lượng '
+  'lưu trữ và dự phòng công suất. Tuy nhiên, hệ thống có ưu điểm vượt trội về tính tự chủ, '
+  'giảm phụ thuộc vào nhiên liệu hóa thạch và giảm phát thải khí nhà kính.')
+
+BREAK()
+
+# ===================== CHUONG 6 =====================
+H('CHƯƠNG 6: KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN', 1)
+
+H('6.1. Kết luận', 2)
+P('Đề tài đã xây dựng mô hình hệ thống microgrid đảo ST – Giai đoạn 3 tại khu vực biển Đông, '
+  'gần Côn Đảo trên phần mềm HOMER Pro, với đầy đủ các thành phần: nguồn điện mặt trời, tuabin gió, '
+  'hệ thống pin lưu trữ và bộ biến tần tạo lưới. Các thông số đầu vào được lấy trực tiếp từ sơ đồ '

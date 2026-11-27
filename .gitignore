@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+~$*
+*.tmp
+_brief_*.txt
+_slide_preview/
+_slide_charts/
+HO_SO_NOP_BAO_CAO_ST_GIAI_DOAN_3.zip

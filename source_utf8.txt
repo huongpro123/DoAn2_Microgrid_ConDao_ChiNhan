@@ -1,0 +1,191 @@
+
+
+TRƯỜNG ĐẠI HỌC …………………………
+KHOA …………………………
+
+
+
+BÁO CÁO ĐỒ ÁN
+MÔ PHỎNG HỆ THỐNG MICROGRID ĐẢO ST – GIAI ĐOẠN 3
+(KHU VỰC BIỂN ĐÔNG, GẦN CÔN ĐẢO) TRÊN PHẦN MỀM HOMER PRO
+
+
+
+
+
+Sinh viên thực hiện: Đào Chí Nhân
+Lớp: KTNL2311
+Giảng viên hướng dẫn: Trần Hữu Tính
+
+
+
+
+Năm 2026
+
+MỤC LỤC
+Nhấn F9 (hoặc chuột phải → Update Field) để cập nhật mục lục.
+
+MỞ ĐẦU
+1. Lý do chọn đề tài
+Khu vực biển Đông gần Côn Đảo có vị trí quan trọng về quốc phòng – kinh tế, nhưng việc cấp điện cho các phụ tải trên đảo và vùng biển lân cận gặp nhiều khó khăn do khoảng cách xa đất liền, chi phí kéo lưới cao và nguồn nhiên liệu hóa thạch tại chỗ hạn chế. Việc xây dựng hệ thống microgrid độc lập, tận dụng nguồn năng lượng tái tạo tại chỗ (mặt trời, gió) kết hợp lưu trữ năng lượng là hướng đi phù hợp và bền vững.
+Sơ đồ hệ thống ST – Giai đoạn 3 là phương án cấp điện cho một khu vực phụ tải hỗn hợp gồm phụ tải hiện trạng, phụ tải CS và phụ tải KT, với các nguồn điện mặt trời, tuabin gió và hai hệ thống pin lưu trữ. Đề tài tập trung mô phỏng hệ thống này trên phần mềm HOMER Pro nhằm tính toán các chỉ tiêu kỹ thuật – kinh tế.
+2. Mục tiêu của đề tài
+Xây dựng mô hình microgrid đảo ST – Giai đoạn 3 trên phần mềm HOMER Pro;
+Tính toán các thông số kỹ thuật của từng thành phần: phụ tải, điện mặt trời, điện gió, pin lưu trữ, biến tần;
+Trình bày hệ thống công thức tính toán làm cơ sở cho việc thiết lập thông số đầu vào;
+Tính toán các chỉ tiêu kinh tế: lãi suất chiết khấu thực, CRF, NPC, COE và thời gian hoàn vốn;
+Đánh giá kết quả và đề xuất hướng phát triển.
+3. Đối tượng và phạm vi nghiên cứu
+Đối tượng nghiên cứu: hệ thống microgrid đảo ST – Giai đoạn 3 tại khu vực biển Đông, gần Côn Đảo.
+Phạm vi: chỉ xét sơ đồ ST – Giai đoạn 3 với các thiết bị gồm 3 dàn pin mặt trời (tổng 213,2 kWp), một tuabin gió 2.000 kW, hai bộ pin lưu trữ (tổng 11.700 kWh) cùng hai biến tần tạo lưới 1 MW, cấp điện cho ba nhóm phụ tải có tổng công suất đặt 783,1 kW.
+4. Phương pháp nghiên cứu
+Phương pháp mô phỏng trên HOMER Pro kết hợp tính toán giải tích theo các công thức chuẩn của lý thuyết hệ thống điện và phân tích kinh tế vòng đời. Số liệu đầu vào được lấy trực tiếp từ sơ đồ nguyên lý và các thông số chế độ đã thiết lập trong phần mềm (lãi suất chiết khấu 8%/năm, lạm phát 2%/năm, thời gian dự án 25 năm).
+
+CHƯƠNG 1: TỔNG QUAN HỆ THỐNG ST – GIAI ĐOẠN 3
+1.1. Vị trí địa lý và điều kiện tự nhiên
+Khu vực nghiên cứu nằm tại Côn Đảo (tỉnh Bà Rịa – Vũng Tàu), có tọa độ địa lý khoảng 8,68° vĩ Bắc và 106,62° kinh Đông, cách đất liền huyện Vũng Tàu khoảng 80 hải lý. Đây là khu vực có bức xạ mặt trời tương đối cao, đạt trung bình khoảng 4,9 kWh/m²/ngày, và nguồn gió khá dồi dào, đặc biệt trong các tháng mùa khô và gió mùa Đông Bắc. Điều kiện này thuận lợi cho việc khai thác điện mặt trời và điện gió tại chỗ.
+Hệ thống ST – Giai đoạn 3 là hệ microgrid độc lập (không nối lưới điện quốc gia), sử dụng nguồn năng lượng tái tạo kết hợp hệ thống lưu trữ để cấp điện cho phụ tải trên đảo. Do vận hành độc lập, yêu cầu về độ tin cậy cấp điện và dung lượng lưu trữ được đặc biệt chú trọng.
+1.2. Sơ đồ nguyên lý hệ thống
+Sơ đồ nguyên lý hệ thống microgrid ST – Giai đoạn 3 được trình bày trên Hình 1.1. Hệ thống có thanh cái AC và DC, các nguồn điện mặt trời (DC) và tuabin gió (AC), hệ thống pin lưu trữ kết nối qua biến tần tạo lưới, và các nhóm phụ tải được cấp từ tủ phân phối hạ thế 0,4 kV.
+
+Hình 1.1. Sơ đồ nguyên lý hệ thống microgrid ST – Giai đoạn 3
+1.3. Thông số thiết bị của hệ thống
+Các thông số định mức của thiết bị được lấy trực tiếp từ sơ đồ nguyên lý và tổng hợp trong Bảng 1.1.
+Bảng 1.1. Tổng hợp thông số thiết bị của hệ thống
+
+
+CHƯƠNG 2: DỮ LIỆU ĐẦU VÀO PHỤC VỤ MÔ PHỎNG
+2.1. Phụ tải
+Ba nhóm phụ tải trong hệ thống có công suất đặt lần lượt là 118,1 kW (phụ tải hiện trạng), 40,0 kW (phụ tải CS) và 625,0 kW (phụ tải KT). Tổng công suất đặt/đỉnh của hệ thống:
+Pđỉnh = Phiện trạng + PCS + PKT = 118,1 + 40,0 + 625,0 = 783,1 kW
+Với hệ số tải ktải = 0,55 (phụ tải đảo có tính mùa vụ), phụ tải trung bình và điện năng tiêu thụ năm:
+Ptb = ktải × Pđỉnh = 0,55 × 783,1 = 430,7 kW
+Engày = Ptb × 24 = 10.336,9 kWh/ngày
+Enăm = Engày × 365 = 3.772.976 kWh/năm
+Kết quả cho thấy nhu cầu điện năng của khu vực khoảng 3,77 GWh/năm, là cơ sở để thiết kế công suất các nguồn phát và dung lượng lưu trữ.
+2.2. Bức xạ mặt trời
+Dữ liệu bức xạ mặt trời được lấy theo tọa độ Côn Đảo từ nguồn NASA (phù hợp với HOMER Pro), với tổng xạ trung bình khoảng 4,9 kWh/m²/ngày, tương đương 1.788,5 kWh/m²/năm. Hệ số hiệu suất tổng hợp của dàn PV (PR) lấy bằng 0,80, kể cả tổn thất nhiệt độ, bụi bẩn, sai lệch điểm làm việc và tổn thất dây dẫn.
+2.3. Tốc độ gió
+Nguồn gió tại khu vực được khai thác bằng tuabin 2.000 kW. Tốc độ gió tại độ cao trục tuabin cho phép đạt hệ số công suất CF khoảng 0,38 trong điều kiện gió ngoài khơi gần Côn Đảo. Đường cong công suất của tuabin được nhập theo mẫu thiết bị tương ứng trên HOMER Pro.
+2.4. Thông số kinh tế
+Các thông số kinh tế được thiết lập thống nhất trong HOMER Pro như Bảng 2.1. Lãi suất chiết khấu thực được tính từ lãi suất danh nghĩa và tỷ lệ lạm phát theo công thức Fisher.
+Bảng 2.1. Thông số kinh tế và thời gian dự án
+
+
+CHƯƠNG 3: MÔ HÌNH HỆ THỐNG TRÊN HOMER PRO
+3.1. Kiến trúc mô hình
+HOMER Pro biểu diễn hệ thống microgrid theo kiến trúc thanh cái AC và DC. Trong mô hình ST – Giai đoạn 3:
+Thanh cái AC: kết nối tuabin gió, biến tần PV, biến tần tạo lưới và các nhóm phụ tải AC;
+Thanh cái DC: kết nối các dàn pin mặt trời và hệ thống pin lưu trữ;
+Bộ biến tần tạo lưới (grid-forming inverter) 1 MW × 2 bộ đảm bảo dựng lưới và cân bằng công suất;
+Hệ thống vận hành độc lập, không có phần tử Grid (không nối lưới điện quốc gia).
+3.2. Thông số các thành phần
+Các thành phần được khai báo với công suất định mức lấy từ sơ đồ: dàn PV tổng 213,2 kWp, tuabin gió 2.000 kW, pin lưu trữ 11.700 kWh và biến tần tạo lưới tổng 2.000 kW. HOMER Pro sẽ mô phỏng vận hành theo từng giờ trong 8.760 giờ của năm, trên cơ sở đó tổng hợp sản lượng, chi phí và các chỉ tiêu kinh tế.
+3.3. Chiến lược điều độ
+Hệ thống sử dụng chiến lược điều độ theo chi phí cận biên của HOMER Pro. Với nguồn gió và mặt trời chiếm ưu thế, phần lớn thời gian pin được nạp từ nguồn tái tạo dư và xả về phụ tải khi nguồn phát suy giảm. Do hệ thống vận hành độc lập, phần điện dư vượt quá khả năng hấp thụ của pin và phụ tải sẽ bị cắt giảm (curtailment).
+3.4. Ràng buộc hệ thống
+Các ràng buộc kỹ thuật được khai báo để định hình không gian nghiệm gồm: tỷ lệ điện năng không được phục vụ tối đa, giới hạn công suất của bộ biến tần và trạng thái sạc tối thiểu của pin. Các ràng buộc này đảm bảo mọi phương án được so sánh trong cùng điều kiện vận hành.
+
+CHƯƠNG 4: CƠ SỞ TÍNH TOÁN VÀ CÔNG THỨC
+4.1. Tính toán phụ tải
+Công suất đỉnh và điện năng tiêu thụ được xác định theo công thức:
+Pđỉnh = Σ Pi
+Engày = Ptb × 24, với Ptb = ktải × Pđỉnh
+Enăm = Engày × 365
+4.2. Tính toán điện mặt trời
+Công suất đỉnh lắp đặt của dàn PV:
+PPV = N × Wp
+Sản lượng điện năm của dàn PV:
+EPV = PPV × (H / 1 kW/m²) × PR
+Trong đó H là tổng bức xạ năm trên mặt phẳng nghiêng (kWh/m²/năm), PR là hệ số hiệu suất tổng hợp. Tỷ số công suất DC/AC của biến tần PV:
+kDC/AC = PPV / Pbiến tần PV
+4.3. Tính toán tuabin gió
+Sản lượng điện năm của tuabin gió:
+Egió = Pđịnh mức × CF × 8.760
+hgió = CF × 8.760
+Trong đó CF là hệ số công suất của tuabin và hgió là số giờ làm việc hiệu dụng ở công suất định mức.
+4.4. Tính toán hệ thống pin lưu trữ
+Dung lượng khả dụng và thời gian tự chủ của pin:
+Ekhả dụng = Epin × DoD
+ttự chủ = Ekhả dụng / Pphụ tải
+Tốc độ sạc/xả (C-rate) đặc trưng cho mức độ làm việc của pin:
+Crate = Pbiến tần / Epin
+4.5. Tính toán biến tần
+Công suất biến tần tạo lưới tối thiểu phải đảm bảo cấp đủ phụ tải đỉnh:
+PGFL, min ≥ Pđỉnh / ηbiến tần
+4.6. Tính toán kinh tế
+Lãi suất chiết khấu thực theo công thức Fisher:
+r = (1 + i) / (1 + f) − 1
+Hệ số thu hồi vốn (Capital Recovery Factor):
+CRF(r, N) = r(1 + r)N / [(1 + r)N − 1]
+Chi phí vòng đời quy về hiện tại (Net Present Cost):
+NPC = C0 + Σ (OMt + Rept − St) / (1 + r)t
+Chi phí điện quy dẫn (Cost of Energy):
+COE = (NPC × CRF) / Enăm
+Thời gian hoàn vốn đơn giản:
+Thoàn vốn = C0 / (Ltiết kiệm/năm − OMnăm)
+
+CHƯƠNG 5: KẾT QUẢ TÍNH TOÁN VÀ MÔ PHỎNG
+5.1. Kết quả tính toán phụ tải
+Bảng 5.1. Kết quả tính toán phụ tải
+
+5.2. Kết quả tính toán điện mặt trời
+Bảng 5.2. Kết quả tính toán hệ điện mặt trời
+
+5.3. Kết quả tính toán tuabin gió
+Bảng 5.3. Kết quả tính toán tuabin gió
+
+5.4. Kết quả tính toán hệ thống pin
+Bảng 5.4. Kết quả tính toán hệ thống pin lưu trữ
+
+5.5. Kết quả tính toán kinh tế
+Vốn đầu tư ban đầu của hệ thống được tổng hợp trong Bảng 5.5.
+Bảng 5.5. Vốn đầu tư ban đầu của hệ thống
+
+Các chỉ tiêu kinh tế được tổng hợp trong Bảng 5.6.
+Bảng 5.6. Kết quả các chỉ tiêu kinh tế
+
+5.6. Kết quả mô phỏng HOMER Pro và nhận xét
+Kết quả chạy mô phỏng trên HOMER Pro với các thông số đầu vào như trên cho thấy hệ thống có khả năng cấp điện ổn định cho toàn bộ phụ tải nhờ sự kết hợp của nguồn gió, nguồn mặt trời và hệ thống pin lưu trữ. Sản lượng điện gió và mặt trời vượt nhu cầu phụ tải, phần dư được nạp vào pin và một phần bị cắt giảm do hệ thống vận hành độc lập.
+Chi phí điện quy dẫn (COE) của hệ thống ở mức khoảng 6.245 VNĐ/kWh, phụ thuộc chủ yếu vào vốn đầu tư tuabin gió và hệ pin lưu trữ. Chi phí vòng đời NPC khoảng 304.578 triệu VNĐ (tương đương 304,58 tỷ VNĐ). Thời gian hoàn vốn đơn giản khoảng 4,80 năm (so với phương án cấp điện bằng diesel với giá khoảng 12.000 VNĐ/kWh).
+So với hệ thống nối lưới, chi phí điện của hệ đảo độc lập cao hơn do phải đầu tư dung lượng lưu trữ và dự phòng công suất. Tuy nhiên, hệ thống có ưu điểm vượt trội về tính tự chủ, giảm phụ thuộc vào nhiên liệu hóa thạch và giảm phát thải khí nhà kính.
+
+CHƯƠNG 6: KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN
+6.1. Kết luận
+Đề tài đã xây dựng mô hình hệ thống microgrid đảo ST – Giai đoạn 3 tại khu vực biển Đông, gần Côn Đảo trên phần mềm HOMER Pro, với đầy đủ các thành phần: nguồn điện mặt trời, tuabin gió, hệ thống pin lưu trữ và bộ biến tần tạo lưới. Các thông số đầu vào được lấy trực tiếp từ sơ đồ nguyên lý và chuẩn hóa thống nhất theo điều kiện kinh tế của dự án.
+Tài liệu đã trình bày hệ thống công thức tính toán cho từng thành phần: phụ tải, điện mặt trời, điện gió, pin lưu trữ, biến tần và các chỉ tiêu kinh tế (lãi suất chiết khấu thực, CRF, NPC, COE, thời gian hoàn vốn). Trên cơ sở đó tính toán được bộ số liệu cụ thể, làm tiền đề đối chiếu với kết quả mô phỏng HOMER Pro.
+Kết quả cho thấy hệ thống có khả năng đáp ứng nhu cầu phụ tải với tỷ lệ năng lượng tái tạo cao, chi phí điện quy dẫn khoảng 6.245 VNĐ/kWh và thời gian hoàn vốn khoảng 4,80 năm. Đây là cơ sở để đánh giá tính khả thi của phương án cấp điện bằng năng lượng tái tạo cho khu vực đảo.
+6.2. Hướng phát triển
+Hoàn thiện mô hình HOMER Pro với dữ liệu khí tượng thực tế tại Côn Đảo và hiệu chỉnh công suất thiết bị;
+Phân tích độ nhạy theo giá thiết bị, lãi suất và độ tin cậy cấp điện;
+Nghiên cứu tích hợp thêm nguồn diesel hoặc biogas làm dự phòng để giảm dung lượng lưu trữ;
+Đánh giá tác động môi trường và phân tích vòng đời (LCA) của hệ thống;
+Mở rộng quy mô mô hình cho các giai đoạn tiếp theo của dự án ST.
+
+TÀI LIỆU THAM KHẢO
+[1] HOMER Energy LLC, HOMER Pro User Manual, Version 3.16, 2023.
+[2] NREL, Global Solar Atlas – Solar resource data for Vietnam, https://globalsolaratlas.info.
+[3] Global Wind Atlas, Wind resource data for Con Dao, https://globalwindatlas.info.
+[4] Nguyễn Bá Thiện, Hệ thống điện mặt trời và điện gió, NXB Khoa học và Kỹ thuật, 2020.
+[5] Bộ Công Thương, Quy hoạch phát triển điện lực quốc gia, 2021.
+[6] EVN, Biểu giá bán điện và giá mua điện từ nguồn năng lượng tái tạo, 2024.
+
+PHỤ LỤC
+Phụ lục A. Bảng tổng hợp kết quả tính toán
+Bảng A.1. Bảng tổng hợp kết quả
+
+Phụ lục B. Tóm tắt công thức sử dụng
+P_đỉnh = Σ P_i
+P_tb = k_tải × P_đỉnh; E_ngày = P_tb × 24; E_năm = E_ngày × 365
+P_PV = N × W_p
+E_PV = P_PV × (H / 1 kW/m²) × PR
+k_DC/AC = P_PV / P_biến tần
+E_gió = P_định mức × CF × 8.760
+E_khả dụng = E_pin × DoD; t_tự chủ = E_khả dụng / P_tải
+C_rate = P_biến tần / E_pin
+P_GFL,min ≥ P_đỉnh / η_biến tần
+r = (1 + i) / (1 + f) − 1
+CRF = r(1 + r)^N / [(1 + r)^N − 1]
+NPC = C_0 + Σ (OM_t + Rep_t − S_t) / (1 + r)^t
+COE = NPC × CRF / E_năm
+T_hoàn vốn = C_0 / (L_tiết kiệm/năm − OM_năm)

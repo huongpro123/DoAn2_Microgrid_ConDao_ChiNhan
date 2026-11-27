@@ -1,0 +1,80 @@
+
+# ===================== CHUONG 2 =====================
+H('CHƯƠNG 2: DỮ LIỆU ĐẦU VÀO PHỤC VỤ MÔ PHỎNG', 1)
+
+H('2.1. Phụ tải', 2)
+P('Ba nhóm phụ tải trong hệ thống có công suất đặt lần lượt là 118,1 kW (phụ tải hiện trạng), '
+  '40,0 kW (phụ tải CS) và 625,0 kW (phụ tải KT). Tổng công suất đặt/đỉnh của hệ thống:')
+FORMULA('P_{đỉnh} = P_{hiện trạng} + P_{CS} + P_{KT} = 118,1 + 40,0 + 625,0 = 783,1 kW')
+P('Với hệ số tải k_{tải} = 0,55 (phụ tải đảo có tính mùa vụ), phụ tải trung bình và điện năng tiêu thụ năm:')
+FORMULA('P_{tb} = k_{tải} × P_{đỉnh} = 0,55 × 783,1 = %s kW' % vn(P_avg, 1))
+FORMULA('E_{ngày} = P_{tb} × 24 = %s kWh/ngày' % vn(E_day, 1))
+FORMULA('E_{năm} = E_{ngày} × 365 = %s kWh/năm' % vn(E_load, 0))
+P('Kết quả cho thấy nhu cầu điện năng của khu vực khoảng %s GWh/năm, là cơ sở để thiết kế '
+  'công suất các nguồn phát và dung lượng lưu trữ.' % vn(E_load / 1e6, 2))
+
+H('2.2. Bức xạ mặt trời', 2)
+P('Dữ liệu bức xạ mặt trời được lấy theo tọa độ Côn Đảo từ nguồn NASA (phù hợp với HOMER Pro), '
+  'với tổng xạ trung bình khoảng 4,9 kWh/m²/ngày, tương đương %s kWh/m²/năm. '
+  'Hệ số hiệu suất tổng hợp của dàn PV (PR) lấy bằng 0,80, kể cả tổn thất nhiệt độ, bụi bẩn, '
+  'sai lệch điểm làm việc và tổn thất dây dẫn.' % vn(GHI_year, 1))
+
+H('2.3. Tốc độ gió', 2)
+P('Nguồn gió tại khu vực được khai thác bằng tuabin 2.000 kW. Tốc độ gió tại độ cao trục tuabin '
+  'cho phép đạt hệ số công suất CF khoảng 0,38 trong điều kiện gió ngoài khơi gần Côn Đảo. '
+  'Đường cong công suất của tuabin được nhập theo mẫu thiết bị tương ứng trên HOMER Pro.')
+
+H('2.4. Thông số kinh tế', 2)
+P('Các thông số kinh tế được thiết lập thống nhất trong HOMER Pro như Bảng 2.1. '
+  'Lãi suất chiết khấu thực được tính từ lãi suất danh nghĩa và tỷ lệ lạm phát theo công thức Fisher.')
+TBL(
+    ['Thông số', 'Giá trị', 'Ghi chú'],
+    [
+        ['Discount rate (danh nghĩa)', '8,00 %/năm', 'Lãi suất chiết khấu danh nghĩa'],
+        ['Inflation rate', '2,00 %/năm', 'Tỷ lệ lạm phát'],
+        ['Lãi suất chiết khấu thực r', '%s %%/năm' % vn(r_real * 100, 2), 'r = (1 + 0,08)/(1 + 0,02) − 1'],
+        ['Annual capacity shortage', '0,00 %', 'Không cho phép thiếu hụt'],
+        ['Project lifetime', '25 năm', 'Thời gian dự án'],
+        ['Location', '8,683°N – 106,617°E', 'Côn Đảo (Bà Rịa – Vũng Tàu)'],
+    ],
+    widths=[6.0, 4.5, 5.5], caption='Bảng 2.1. Thông số kinh tế và thời gian dự án')
+
+BREAK()
+
+# ===================== CHUONG 3 =====================
+H('CHƯƠNG 3: MÔ HÌNH HỆ THỐNG TRÊN HOMER PRO', 1)
+
+H('3.1. Kiến trúc mô hình', 2)
+P('HOMER Pro biểu diễn hệ thống microgrid theo kiến trúc thanh cái AC và DC. Trong mô hình ST – Giai đoạn 3:')
+for it in [
+    'Thanh cái AC: kết nối tuabin gió, biến tần PV, biến tần tạo lưới và các nhóm phụ tải AC;',
+    'Thanh cái DC: kết nối các dàn pin mặt trời và hệ thống pin lưu trữ;',
+    'Bộ biến tần tạo lưới (grid-forming inverter) 1 MW × 2 bộ đảm bảo dựng lưới và cân bằng công suất;',
+    'Hệ thống vận hành độc lập, không có phần tử Grid (không nối lưới điện quốc gia).',
+]:
+    p = doc.add_paragraph(it, style='List Bullet')
+    for run in p.runs:
+        run.font.name = 'Times New Roman'; run.font.size = Pt(13)
+
+H('3.2. Thông số các thành phần', 2)
+P('Các thành phần được khai báo với công suất định mức lấy từ sơ đồ: dàn PV tổng 213,2 kWp, '
+  'tuabin gió 2.000 kW, pin lưu trữ 11.700 kWh và biến tần tạo lưới tổng 2.000 kW. '
+  'HOMER Pro sẽ mô phỏng vận hành theo từng giờ trong 8.760 giờ của năm, trên cơ sở đó tổng hợp '
+  'sản lượng, chi phí và các chỉ tiêu kinh tế.')
+
+H('3.3. Chiến lược điều độ', 2)
+P('Hệ thống sử dụng chiến lược điều độ theo chi phí cận biên của HOMER Pro. Với nguồn gió và mặt trời '
+  'chiếm ưu thế, phần lớn thời gian pin được nạp từ nguồn tái tạo dư và xả về phụ tải khi nguồn phát '
+  'suy giảm. Do hệ thống vận hành độc lập, phần điện dư vượt quá khả năng hấp thụ của pin và phụ tải '
+  'sẽ bị cắt giảm (curtailment).')
+
+H('3.4. Ràng buộc hệ thống', 2)
+P('Các ràng buộc kỹ thuật được khai báo để định hình không gian nghiệm gồm: tỷ lệ điện năng không '
+  'được phục vụ tối đa, giới hạn công suất của bộ biến tần và trạng thái sạc tối thiểu của pin. '
+  'Các ràng buộc này đảm bảo mọi phương án được so sánh trong cùng điều kiện vận hành.')
+
+BREAK()
+
+# ===================== CHUONG 4 =====================
+H('CHƯƠNG 4: CƠ SỞ TÍNH TOÁN VÀ CÔNG THỨC', 1)
+

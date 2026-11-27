@@ -1,0 +1,20 @@
+321:   'Do vận hành độc lập, yêu cầu về độ tin cậy cấp điện và dung lượng lưu trữ được đặc biệt chú trọng.')
+322: 
+323: H('1.2. Sơ đồ nguyên lý hệ thống', 2)
+324: P('Sơ đồ nguyên lý hệ thống microgrid ST – Giai đoạn 3 được trình bày trên Hình 1.1. '
+325:   'Hệ thống có thanh cái AC và DC, các nguồn điện mặt trời (DC) và tuabin gió (AC), '
+326:   'hệ thống pin lưu trữ kết nối qua biến tần tạo lưới, và các nhóm phụ tải được cấp từ '
+327:   'tủ phân phối hạ thế 0,4 kV.')
+328: try:
+329:     doc.add_picture('st_diagram.png', width=Cm(14.5))
+330:     CAP('Hình 1.1. Sơ đồ nguyên lý hệ thống microgrid ST – Giai đoạn 3')
+331: except Exception as e:
+332:     P('(Không chèn được hình: %s)' % e)
+333: 
+334: H('1.3. Thông số thiết bị của hệ thống', 2)
+335: P('Các thông số định mức của thiết bị được lấy trực tiếp từ sơ đồ nguyên lý và tổng hợp trong Bảng 1.1.')
+336: TBL(
+337:     ['Nhóm', 'Thiết bị', 'Thông số định mức', 'Số lượng', 'Tổng công suất'],
+338:     [
+339:         ['Nguồn PV', 'Tấm pin quang điện 650 Wp', 'Dàn A: 650 Wp × 109 tấm', '1 dàn', '70,85 kWp'],
+340:         ['', '', 'Dàn B: 650 Wp × 109 tấm', '1 dàn', '70,85 kWp'],
