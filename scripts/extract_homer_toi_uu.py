@@ -7,7 +7,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 HOMER_DIR = BASE_DIR / "homer"
-HOMER_PATH = HOMER_DIR / "ST_Giai_doan_3_toi_uu.homer"
+HOMER_PATH = HOMER_DIR / "ST_Giai_doan_3_toi_uu_783kW.homer"
 OUT_JSON = HOMER_DIR / "homer_toi_uu_results.json"
 
 

@@ -73,7 +73,7 @@ def make_charts():
         "Cấu hình CHỌN\n(1×500 kW Gió)",
     ]
     unmet = [18.0, 0.0, 0.0, 0.0]
-    excess = [58.4, 52.3, 26.14, 6.15]
+    excess = [58.4, 52.3, LOWEST["excess_pct"], OPT["excess_pct"]]
     x = np.arange(len(labels))
     w = 0.35
     b1 = ax.bar(x - w / 2, unmet, w, label="Thiếu tải Unmet (%)", color=DANGER_HEX)
@@ -108,11 +108,11 @@ def make_charts():
     fig, ax = plt.subplots(figsize=(7.2, 3.85), dpi=220)
     fig.patch.set_facecolor(BG_HEX)
     sources = [
-        "Điện mặt trời PV\n(1.200 kWp)",
+        "Điện mặt trời PV\n(1.400 kWp)",
         "Tuabin gió\n(1 × 500 kW)",
-        "Máy phát Diesel\n(970 kW dự phòng)",
+        "Máy phát Diesel\n(750 kW dự phòng)",
         "Phụ tải tiêu thụ\n(Đáp ứng 100%)",
-        "Điện dư cắt giảm\n(6,15 % ≤ 10 %)",
+        "Điện dư cắt giảm\n(9,30 % ≤ 10 %)",
     ]
     vals = [
         OPT["pv_prod"] / 1e6,
@@ -217,7 +217,7 @@ def make_charts():
             fontweight="bold",
         )
     ax1.annotate(
-        "-78,5 %",
+        "-82,7 %",
         xy=(1, f_vals[1] + 35),
         xytext=(0.45, 760),
         arrowprops=dict(arrowstyle="->", color=ACCENT_HEX, lw=1.6),
@@ -243,7 +243,7 @@ def make_charts():
             fontweight="bold",
         )
     ax2.annotate(
-        "Tránh\n2.167,5 t/năm",
+        "Tránh\n2.195,2 t/năm",
         xy=(1, e_vals[1] + 80),
         xytext=(0.28, 1850),
         arrowprops=dict(arrowstyle="->", color=OK_HEX, lw=1.6),
@@ -343,9 +343,9 @@ def add_ctut_cover(deck):
     # 4 thẻ KPI nổi bật
     pills = [
         ("THIẾU TẢI (UNMET)", "0,00 %", "ok"),
-        ("ĐIỆN DƯ (EXCESS)", "6,15 %", "accent"),
-        ("GIÁ ĐIỆN (LCOE)", "$0,2367/kWh", "warn"),
-        ("GIẢM PHÁT THẢI CO₂", "-2.167,5 t/năm", "ok"),
+        ("ĐIỆN DƯ (EXCESS)", "9,30 %", "accent"),
+        ("GIÁ ĐIỆN (LCOE)", "$0,2207/kWh", "warn"),
+        ("GIẢM PHÁT THẢI CO₂", "-2.195,2 t/năm", "ok"),
     ]
     cw, gap = 2.81, 0.24
     for i, (lbl, val, tone) in enumerate(pills):
@@ -391,9 +391,9 @@ def add_thank_you_slide(deck, slide_no=16):
 
     # 3 chip tóm tắt thông điệp chốt nhanh khi đứng Q&A
     chips = [
-        ("CẤU HÌNH TỐI ƯU", "1.200 kWp PV · 500 kW Gió · 6 MWh BESS", "ok"),
-        ("CHUẨN KỸ THUẬT", "0,00 % Thiếu tải · 6,15 % Điện dư", "accent"),
-        ("HIỆU QUẢ KINH TẾ – XANH", "NPC -40,7 % · Tránh 2.167,5 t CO₂/năm", "warn"),
+        ("CẤU HÌNH TỐI ƯU", "1.400 kWp PV · 500 kW Gió · 6 MWh BESS", "ok"),
+        ("CHUẨN KỸ THUẬT", "0,00 % Thiếu tải · 9,30 % Điện dư", "accent"),
+        ("HIỆU QUẢ KINH TẾ – XANH", "NPC -41,4 % · Tránh 2.195,2 t CO₂/năm", "warn"),
     ]
     cw, gap = 3.56, 0.24
     start_x = 1.06
@@ -433,8 +433,8 @@ def build_deck():
         img_path=ASSETS_DIR / "con_dao_region.png",
         right_title="Mục tiêu & Ràng buộc đề tài",
         bullets=[
-            ("Đặc thù lưới đảo", "Cách xa đất liền, không nối lưới quốc gia; chạy thuần Diesel tốn >1,05 triệu L dầu/năm (LCOE $0,3990/kWh)."),
-            ("Nhu cầu phụ tải năm", "3.773.005 kWh/năm (~10.337 kWh/ngày), công suất đỉnh 776,0 kW."),
+            ("Đặc thù lưới đảo", "Cách xa đất liền, không nối lưới quốc gia; chạy thuần Diesel tốn >1,01 triệu L dầu/năm (LCOE $0,3763/kWh)."),
+            ("Nhu cầu phụ tải năm", "3.773.005 kWh/năm (10.337 kWh/ngày), công suất đặt 783,1 kW (đỉnh thực tế 748,17 kW)."),
             ("Ràng buộc kỹ thuật", "Đáp ứng 100 % phụ tải (Unmet = 0,00 %) và khống chế điện dư cắt giảm ≤ 10 %."),
             ("Mục tiêu 3 trụ cột", "Đánh giá toàn diện Kỹ thuật – Kinh tế (NPC/LCOE/IRR) – Môi trường (CO₂)."),
         ],
@@ -451,10 +451,10 @@ def build_deck():
                 "Cấu hình 1 · Base Case",
                 "Thuần Diesel dự phòng",
                 [
-                    "Vốn đầu tư ban đầu thấp ($1,185M).",
+                    "Vốn đầu tư ban đầu thấp ($1,54M).",
                     "Phụ thuộc hoàn toàn vận chuyển nhiên liệu ra đảo.",
-                    "Chi phí vận hành cực cao: NPC $19,46M, LCOE $0,3990/kWh.",
-                    "Phát thải lớn: 2.759,5 tấn CO₂/năm.",
+                    "Chi phí vận hành cực cao: NPC $18,36M, LCOE $0,3763/kWh.",
+                    "Phát thải lớn: 2.652,9 tấn CO₂/năm.",
                 ],
                 "danger",
             ),
@@ -473,10 +473,10 @@ def build_deck():
                 "Cấu hình 3 · Chọn tối ưu",
                 "Hybrid PV + Gió + BESS + Diesel",
                 [
-                    "Khai thác bổ trợ nắng – gió, tỷ lệ tái tạo đạt 78,9 %.",
-                    "Diesel 970 kW chỉ chạy dự phòng 2.425 giờ/năm.",
-                    "Đạt đồng thời 0,00 % thiếu tải & 6,15 % điện dư.",
-                    "Giảm 40,7 % NPC/LCOE và tránh 2.167,5 tấn CO₂/năm.",
+                    "Khai thác bổ trợ nắng – gió, tỷ lệ tái tạo đạt 83,5 %.",
+                    "Diesel 750 kW chỉ chạy dự phòng 2.201 giờ/năm.",
+                    "Đạt đồng thời 0,00 % thiếu tải & 9,30 % điện dư.",
+                    "Giảm 41,4 % NPC/LCOE và tránh 2.195,2 tấn CO₂/năm.",
                 ],
                 "ok",
             ),
@@ -489,7 +489,7 @@ def build_deck():
         kicker="03 · Đặc trưng tài nguyên thiên nhiên",
         title="Biến động mùa gió Côn Đảo — Lý do cần phối hợp nguồn Hybrid",
         kpis=[
-            ("PHỤ TẢI NĂM", "3,773 GWh", "Đỉnh 776,0 kW", "accent"),
+            ("PHỤ TẢI NĂM", "3,773 GWh", "Đỉnh thực 748,17 / 783,1 kW", "accent"),
             ("GIÓ MÙA ĐÔNG BẮC", "10,8–11,0 m/s", "Tháng 12 – Tháng 2", "ok"),
             ("MÙA LẶNG GIÓ", "4,97 m/s", "Tháng 4 – Tháng 5", "warn"),
             ("BỔ TRỢ NGUỒN", "PV + BESS", "Gánh tải mùa lặng gió", "accent"),
@@ -498,7 +498,7 @@ def build_deck():
         bullets=[
             ("Phân hóa mùa mạnh", "Gió đạt đỉnh 10,8–11,0 m/s vào T12–T2 nhưng tụt xuống ~4,97 m/s vào T4–T5."),
             ("Hệ quả nếu lắp gió quá lớn", "1 tuabin 2 MW phát dư tới 58,4 % vào mùa gió mạnh nhưng vẫn thiếu khi lặng gió."),
-            ("Giải pháp cân bằng", "Hạ quy mô gió về 1 × 500 kW, kết hợp 1.200 kWp PV + 6.000 kWh BESS và Diesel dự phòng."),
+            ("Giải pháp cân bằng", "Hạ quy mô gió về 1 × 500 kW, kết hợp 1.400 kWp PV + 6.000 kWh BESS và Diesel dự phòng."),
         ],
         slide_no=4,
     )
@@ -511,8 +511,8 @@ def build_deck():
         img_path=OUT_DIR / "05_Hinh_Anh_Ket_Qua_HOMER_Pro" / "st_diagram.png",
         right_title="Phân tầng thanh cái & Điều độ",
         bullets=[
-            ("Thanh cái AC (AC Bus)", "Đấu nối trực tiếp phụ tải đảo ST (776 kW đỉnh), Tuabin gió 500 kW và Máy phát Diesel 970 kW."),
-            ("Thanh cái DC (DC Bus)", "Đấu nối giàn pin mặt trời 1.200 kWp và hệ lưu trữ 60 khối BESS Li-ion 6.000 kWh."),
+            ("Thanh cái AC (AC Bus)", "Đấu nối trực tiếp phụ tải đảo ST (đặt 783,1 kW), Tuabin gió 500 kW và Diesel 750 kW."),
+            ("Thanh cái DC (DC Bus)", "Đấu nối giàn pin mặt trời 1.400 kWp và hệ lưu trữ 60 khối BESS Li-ion 6.000 kWh."),
             ("Bộ biến đổi 2 chiều", "Converter 800 kW (nâng từ 100 kW gốc) — xóa hoàn toàn nghẽn công suất truyền DC ↔ AC."),
             ("Chiến lược Load Following", "Máy phát Diesel chỉ phát đúng phần thiếu tải, nhường nạp BESS cho PV và Gió."),
         ],
@@ -566,14 +566,14 @@ def build_deck():
         kpis=[
             ("THIẾU TẢI GỐC", "18,0 %", "Do nghẽn Converter 100 kW", "danger"),
             ("ĐIỆN DƯ GỐC", "58,4 %", "Cắt giảm 4,43 GWh/năm", "warn"),
-            ("PHƯƠNG ÁN 2 TUABIN", "26,14 % dư", "Vượt ngưỡng 10 %", "warn"),
-            ("PHƯƠNG ÁN CHỌN", "0 % / 6,15 %", "Đạt chuẩn kỹ thuật", "ok"),
+            ("PHƯƠNG ÁN 2 TUABIN", "26,12 % dư", "Vượt ngưỡng 10 %", "warn"),
+            ("PHƯƠNG ÁN CHỌN", "0 % / 9,30 %", "Đạt chuẩn kỹ thuật", "ok"),
         ],
         chart_path=c1,
         bullets=[
-            ("Nút thắt 1 – Converter quá nhỏ", "Converter gốc chỉ 100 kW trong khi đỉnh tải 776 kW → không kịp xả điện từ BESS/PV sang AC."),
+            ("Nút thắt 1 – Converter quá nhỏ", "Converter gốc chỉ 100 kW trong khi đỉnh tải 748,17 kW → không kịp xả điện từ BESS/PV sang AC."),
             ("Nút thắt 2 – Tuabin quá lớn", "1 tuabin E-82 2.000 kW phát tới 7,24 GWh/năm (gấp đôi phụ tải) → dư 58,4 %."),
-            ("Bẫy tối ưu thuần NPC", "Cấu hình 2 × 500 kW gió có NPC thấp nhất ($10,75M) nhưng dư tới 26,14 % > 10 % nên bị loại."),
+            ("Bẫy tối ưu thuần NPC", "Cấu hình 2 × 500 kW gió có NPC thấp nhất ($10,40M) nhưng dư tới 26,12 % > 10 % nên bị loại."),
         ],
         slide_no=7,
     )
@@ -581,17 +581,17 @@ def build_deck():
     # Slide 8: Thiết lập không gian tìm kiếm HOMER Pro
     deck.add_table_slide(
         kicker="07 · Thiết lập mô phỏng HOMER Pro x64 v3.18.5",
-        title="Không gian tìm kiếm & Lọc 454 tổ hợp theo ràng buộc kỹ thuật",
+        title="Không gian tìm kiếm & Lọc 634 tổ hợp theo ràng buộc kỹ thuật",
         headers=["Thành phần / Tham số", "Cấu hình ban đầu", "Dải tối ưu HOMER Pro", "Giá trị CHỌN"],
         rows=[
-            ["Điện mặt trời (PV)", "Cố định nhỏ", "0 – 1.200 kWp", "1.200 kWp"],
+            ["Phụ tải giờ thực tế", "Community thô", "230–640 kW (nhiễu 3 % / 5 %)", "Đỉnh 748,17 kW ≤ 783,1 kW"],
+            ["Điện mặt trời (PV)", "213,2 kWp", "0 – 1.600 kWp", "1.400 kWp"],
             ["Tuabin gió (Wind)", "1 × Enercon E-82 (2.000 kW)", "0 – 2 × Windflow 45 (500 kW, 47 m)", "1 × 500 kW"],
-            ["Lưu trữ pin (BESS Li-ion)", "Nhỏ, thiếu tự chủ", "20 – 117 khối (100 kWh/khối)", "60 khối (6.000 kWh)"],
+            ["Lưu trữ pin (BESS Li-ion)", "117 khối (11.700 kWh)", "20 – 117 khối (100 kWh/khối)", "60 khối (6.000 kWh)"],
             ["Bộ biến đổi (Converter)", "100 kW (nghẽn)", "0 – 1.200 kW", "800 kW"],
-            ["Máy phát dự phòng (Diesel)", "Không dùng", "Autosize Generator (970 kW)", "970 kW (LF)"],
-            ["Ràng buộc & Kết quả lọc", "Thiếu 18,0 % · Dư 58,4 %", "Max Capacity Shortage = 0 % · 454 tổ hợp", "288 cấu hình đạt chuẩn"],
+            ["Máy phát dự phòng (Diesel)", "Không dùng", "Autosize Generator (750 kW)", "750 kW (LF)"],
         ],
-        note="Kết quả quét thực tế trên HOMER Pro v3.18.5: 454 tổ hợp → 450 khả thi → 288 cấu hình đạt đồng thời 0,00 % thiếu tải và ≤ 10 % điện dư.",
+        note="Kết quả quét thực tế trên HOMER Pro v3.18.5: 634 tổ hợp → 630 khả thi → 348 cấu hình đạt đồng thời 0,00 % thiếu tải và ≤ 10 % điện dư.",
         slide_no=8,
     )
 
@@ -603,9 +603,9 @@ def build_deck():
         img_path=OUT_DIR / "05_Hinh_Anh_Ket_Qua_HOMER_Pro" / "homer_opt_table.png",
         right_title="Giải trình chọn phương án",
         bullets=[
-            ("Dòng #1 toàn cục (2 × 500 kW)", "NPC $10,75M, LCOE $0,2204/kWh nhưng điện dư tới 26,14 % — vi phạm ràng buộc ≤ 10 %."),
-            ("Phương án chọn (1 × 500 kW)", "Dẫn đầu trong nhóm 288 cấu hình đạt chuẩn kỹ thuật: Unmet 0,00 % và Excess 6,15 %."),
-            ("Chi phí đánh đổi hợp lý", "LCOE chỉ nhỉnh $0,0163/kWh (+7,4 %) nhưng giảm CAPEX $961.500 và giảm 81 % lượng điện dư."),
+            ("Dòng #1 toàn cục (2 × 500 kW)", "NPC $10,40M, LCOE $0,2133/kWh nhưng điện dư tới 26,12 % — vi phạm ràng buộc ≤ 10 %."),
+            ("Phương án chọn (1 × 500 kW)", "Dẫn đầu trong nhóm 348 cấu hình đạt chuẩn kỹ thuật: Unmet 0,00 % và Excess 9,30 %."),
+            ("Chi phí đánh đổi hợp lý", "LCOE chỉ nhỉnh $0,0074/kWh (+3,5 %) nhưng giảm CAPEX $481.500 và giảm 70,8 % điện dư."),
             ("Điều độ Load Following", "Hiệu quả hơn Cycle Charging nhờ không ép máy phát chạy tải cao để nạp pin."),
         ],
         slide_no=9,
@@ -616,34 +616,34 @@ def build_deck():
     add_image_and_notes(
         deck,
         kicker="09 · Bằng chứng mô phỏng thực tế (HOMER Pro v3.18.5)",
-        title="Chi tiết cấu hình tối ưu chọn: 1.200 kWp PV · 500 kW Gió · 6 MWh BESS",
+        title="Chi tiết cấu hình tối ưu chọn: 1.400 kWp PV · 500 kW Gió · 6 MWh BESS",
         img_path=OUT_DIR / "05_Hinh_Anh_Ket_Qua_HOMER_Pro" / "homer_opt_summary.png",
         right_title="Thông số vận hành then chốt",
         bullets=[
-            ("Tổng sản lượng phát", "4.233.058 kWh/năm phục vụ 3.773.005 kWh/năm phụ tải (0 kWh thiếu)."),
-            ("Hiệu quả BESS 6.000 kWh", "Thời gian tự chủ 11,14 giờ; điện năng luân chuyển 961.779 kWh/năm."),
-            ("Vận hành máy phát 970 kW", "Chỉ chạy 2.425 giờ/năm (giảm 44,1 % so với 4.342 giờ của Base Case)."),
-            ("Tính khả thi tài chính", "IRR = 18,9 %, ROI = 15,0 %, hoàn vốn giản đơn 5,02 năm (chiết khấu 6,28 năm)."),
+            ("Tổng sản lượng phát", "4.383.818 kWh/năm phục vụ 3.773.005 kWh/năm phụ tải (0 kWh thiếu)."),
+            ("Hiệu quả BESS 6.000 kWh", "Thời gian tự chủ 11,14 giờ; điện năng luân chuyển 977.229 kWh/năm."),
+            ("Vận hành máy phát 750 kW", "Chỉ chạy 2.201 giờ/năm (giảm 59,2 % so với 5.400 giờ của Base Case)."),
+            ("Tính khả thi tài chính", "IRR = 19,6 %, ROI = 15,8 %, hoàn vốn giản đơn 5,02 năm (chiết khấu 5,84 năm)."),
         ],
         slide_no=10,
-        img_caption="Ảnh chụp trực tiếp Simulation Summary của cấu hình chọn trên HOMER Pro v3.18.5",
+        img_caption="Ảnh chụp trực tiếp Simulation Summary từ HOMER Pro x64 v3.18.5",
     )
 
     # Slide 11: Trụ cột 1 — Kỹ thuật & Cơ cấu sản lượng
     deck.add_kpi_and_chart(
         kicker="10 · Trụ cột 1 – Đánh giá Kỹ thuật",
-        title="Cân bằng năng lượng: Tái tạo chiếm 78,9 %, điện dư chỉ 6,15 %",
+        title="Cân bằng năng lượng: Tái tạo chiếm 83,5 %, điện dư chỉ 9,30 %",
         kpis=[
-            ("TỶ LỆ TÁI TẠO (RF)", "78,9 %", "PV 45,8 % + Gió 35,4 %", "ok"),
+            ("TỶ LỆ TÁI TẠO (RF)", "83,5 %", "PV 51,6 % + Gió 34,2 %", "ok"),
             ("ĐÁP ỨNG PHỤ TẢI", "100,0 %", "0 kWh thiếu tải/năm", "ok"),
-            ("ĐIỆN DƯ CẮT GIẢM", "6,15 %", "260.422 kWh (≤ 10 %)", "accent"),
-            ("TỰ CHỦ BESS", "11,14 giờ", "Luân chuyển 961,8 MWh", "warn"),
+            ("ĐIỆN DƯ CẮT GIẢM", "9,30 %", "407.745 kWh (≤ 10 %)", "accent"),
+            ("TỰ CHỦ BESS", "11,14 giờ", "Luân chuyển 977,2 MWh", "warn"),
         ],
         chart_path=c2,
         bullets=[
-            ("Đóng góp PV (1,94 GWh)", "Chiếm 45,8 % tổng phát — cung cấp nền ổn định vào ban ngày và mùa lặng gió."),
-            ("Đóng góp Gió (1,50 GWh)", "Chiếm 35,4 % tổng phát — phát mạnh về đêm và mùa gió Đông Bắc."),
-            ("Dự phòng Diesel (0,80 GWh)", "Chỉ chiếm 18,8 % — đảm bảo an ninh cấp điện 100 % khi âm u/lặng gió kéo dài."),
+            ("Đóng góp PV (2,26 GWh)", "Chiếm 51,6 % tổng phát — cung cấp nền ổn định vào ban ngày và mùa lặng gió."),
+            ("Đóng góp Gió (1,50 GWh)", "Chiếm 34,2 % tổng phát — phát mạnh về đêm và mùa gió Đông Bắc."),
+            ("Dự phòng Diesel (0,62 GWh)", "Chỉ chiếm 14,2 % — đảm bảo an ninh cấp điện 100 % khi âm u/lặng gió kéo dài."),
         ],
         slide_no=11,
     )
@@ -651,18 +651,18 @@ def build_deck():
     # Slide 12: Trụ cột 2 — Kinh tế vòng đời
     deck.add_kpi_and_chart(
         kicker="11 · Trụ cột 2 – Đánh giá Kinh tế (25 năm)",
-        title="Giảm 40,7 % tổng chi phí NPC và giá điện LCOE so với Base Case",
+        title="Giảm 41,4 % tổng chi phí NPC và giá điện LCOE so với Base Case",
         kpis=[
-            ("CAPEX ĐẦU TƯ", "$5,95M", "Giảm 16,0 % so bản đầu", "accent"),
-            ("NPC 25 NĂM", "$11,54M", "Tiết kiệm $7,92M (-40,7 %)", "ok"),
-            ("GIÁ ĐIỆN LCOE", "$0,2367", "Giảm từ $0,3990 (-40,7 %)", "ok"),
-            ("HOÀN VỐN / IRR", "5,02 năm", "IRR 18,9 % · ROI 15,0 %", "warn"),
+            ("CAPEX ĐẦU TƯ", "$6,32M", "Giảm 10,8 % so bản đầu", "accent"),
+            ("NPC 25 NĂM", "$10,76M", "Tiết kiệm $7,59M (-41,4 %)", "ok"),
+            ("GIÁ ĐIỆN LCOE", "$0,2207", "Giảm từ $0,3763 (-41,4 %)", "ok"),
+            ("HOÀN VỐN / IRR", "5,02 năm", "IRR 19,6 % · ROI 15,8 %", "warn"),
         ],
         chart_path=c3,
         bullets=[
-            ("Vượt trội Base Case", "Tuy CAPEX cao hơn Diesel thuần ($5,95M vs $1,19M), chi phí vận hành giảm mạnh từ $1,41M xuống $0,43M/năm."),
-            ("Tiết kiệm vốn hơn bản gốc", "Bỏ tuabin 2 MW dư thừa giúp giảm $1,13M vốn đầu tư ban đầu (-16,0 %)."),
-            ("Giá trị hiện tại ròng", "Present Worth đạt +$6,94M sau 25 năm vận hành — dự án khả thi cao."),
+            ("Vượt trội Base Case", "Tuy CAPEX cao hơn Diesel thuần ($6,32M vs $1,54M), chi phí vận hành giảm mạnh từ $1,30M xuống $0,34M/năm."),
+            ("Tiết kiệm vốn hơn bản gốc", "Thu gọn BESS và tuabin giúp giảm $0,76M vốn đầu tư ban đầu (-10,8 %)."),
+            ("Giá trị hiện tại ròng", "Present Worth đạt +$7,48M sau 25 năm vận hành — dự án khả thi cao."),
         ],
         slide_no=12,
     )
@@ -670,18 +670,18 @@ def build_deck():
     # Slide 13: Trụ cột 3 — Nhiên liệu & Môi trường
     deck.add_kpi_and_chart(
         kicker="12 · Trụ cột 3 – Đánh giá Môi trường",
-        title="Cắt giảm 78,5 % dầu Diesel và tránh 2.167,5 tấn CO₂ mỗi năm",
+        title="Cắt giảm 82,7 % dầu Diesel và tránh 2.195,2 tấn CO₂ mỗi năm",
         kpis=[
-            ("TIẾT KIỆM DẦU", "828.050 L", "Mỗi năm (-78,5 %)", "ok"),
-            ("TRÁNH PHÁT THẢI CO₂", "2.167,5 tấn", "2.759,5 → 592,0 t/năm", "ok"),
-            ("GIẢM NOx / SO₂", "-78,5 %", "Bảo vệ hệ sinh thái đảo", "accent"),
-            ("GIỜ CHẠY DIESEL", "2.425 h/năm", "Giảm 1.917 h/năm", "warn"),
+            ("TIẾT KIỆM DẦU", "838.609 L", "Mỗi năm (-82,7 %)", "ok"),
+            ("TRÁNH PHÁT THẢI CO₂", "2.195,2 tấn", "2.652,9 → 457,7 t/năm", "ok"),
+            ("GIẢM NOx / SO₂", "-82,7 %", "Bảo vệ hệ sinh thái đảo", "accent"),
+            ("GIỜ CHẠY DIESEL", "2.201 h/năm", "Giảm 3.199 h/năm", "warn"),
         ],
         chart_path=c4,
         bullets=[
-            ("Giảm rủi ro hậu cần biển", "Giảm từ 1.054.193 L xuống 226.143 L/năm, hạn chế phụ thuộc tàu chở dầu mùa biển động."),
-            ("Phát thải trong 25 năm", "Tránh tích lũy hơn 54.187 tấn CO₂ trong suốt vòng đời dự án."),
-            ("Giảm tiếng ồn & bảo dưỡng", "Số giờ chạy máy phát giảm 44,1 %, kéo dài tuổi thọ tổ máy phát Diesel."),
+            ("Giảm rủi ro hậu cần biển", "Giảm từ 1.013.464 L xuống 174.855 L/năm, hạn chế phụ thuộc tàu chở dầu mùa biển động."),
+            ("Phát thải trong 25 năm", "Tránh tích lũy hơn 54.880 tấn CO₂ trong suốt vòng đời dự án."),
+            ("Giảm tiếng ồn & bảo dưỡng", "Số giờ chạy máy phát giảm 59,2 %, kéo dài tuổi thọ tổ máy phát Diesel."),
         ],
         slide_no=13,
     )
@@ -693,14 +693,14 @@ def build_deck():
         headers=["Trụ cột", "Chỉ tiêu", "Base Case Diesel", "Cấu hình ban đầu", "Cấu hình CHỌN"],
         rows=[
             ["Kỹ thuật", "Thiếu tải / Đáp ứng", "0,00 % / 100 %", "18,0 % / 82,0 %", "0,00 % / 100,0 %"],
-            ["Kỹ thuật", "Điện dư cắt giảm", "0,00 %", "58,4 %", "6,15 % (≤ 10 %)"],
-            ["Kỹ thuật", "Tỷ lệ tái tạo (RF)", "0,0 %", "100 % (thiếu tải)", "78,9 %"],
-            ["Kinh tế", "CAPEX (USD)", "$1.185.000", "$7.078.680", "$5.946.500 (-16,0 %)"],
-            ["Kinh tế", "NPC 25 năm (USD)", "$19.462.122", "$9.402.682*", "$11.544.581 (-40,7 %)"],
-            ["Kinh tế", "LCOE (USD/kWh)", "$0,3990", "$0,2351*", "$0,2367 (-40,7 %)"],
-            ["Môi trường", "Dầu / Phát thải CO₂", "1,05M L · 2.759,5 t", "0 L · cắt 4,43 GWh", "226k L · 592,0 t (-78,5 %)"],
+            ["Kỹ thuật", "Điện dư cắt giảm", "0,00 %", "58,4 %", "9,30 % (≤ 10 %)"],
+            ["Kỹ thuật", "Tỷ lệ tái tạo (RF)", "0,0 %", "100 % (thiếu tải)", "83,5 %"],
+            ["Kinh tế", "CAPEX (USD)", "$1.535.000", "$7.078.680", "$6.316.500 (-10,8 %)"],
+            ["Kinh tế", "NPC 25 năm (USD)", "$18.356.222", "$9.402.682*", "$10.763.995 (-41,4 %)"],
+            ["Kinh tế", "LCOE (USD/kWh)", "$0,3763", "$0,2351*", "$0,2207 (-41,4 %)"],
+            ["Môi trường", "Dầu / Phát thải CO₂", "1,01M L · 2.652,9 t", "0 L · cắt 4,43 GWh", "174,9k L · 457,7 t (-82,7 %)"],
         ],
-        note="Đã hoàn thành 6/6 góp ý của TS. Trần Hữu Tính: tách sạch Chương 1–3, công thức (2.1)–(2.24), chạy thật HOMER Pro v3.18.5, báo cáo chuẩn CTUT 100/100.",
+        note="Đã hoàn thành 6/6 góp ý + cập nhật đồ thị tải 783,1 kW (Peak 748,17 kW): chạy thật HOMER Pro v3.18.5, báo cáo chuẩn CTUT 100/100.",
         slide_no=14,
     )
 
@@ -713,9 +713,9 @@ def build_deck():
                 "Kết luận đạt được",
                 "Giải trọn bài toán 3 trụ cột",
                 [
-                    "Cấu hình tối ưu: 1.200 kWp PV + 500 kW Gió + 6.000 kWh BESS + 970 kW Diesel + 800 kW Converter.",
-                    "Đạt 0,00 % thiếu tải, 6,15 % điện dư, RF = 78,9 %.",
-                    "NPC giảm 40,7 %, LCOE $0,2367/kWh, hoàn vốn 5,02 năm, tránh 2.167,5 t CO₂/năm.",
+                    "Cấu hình tối ưu: 1.400 kWp PV + 500 kW Gió + 6.000 kWh BESS + 750 kW Diesel + 800 kW Converter.",
+                    "Đạt 0,00 % thiếu tải, 9,30 % điện dư, RF = 83,5 %.",
+                    "NPC giảm 41,4 %, LCOE $0,2207/kWh, hoàn vốn 5,02 năm, tránh 2.195,2 t CO₂/năm.",
                 ],
                 "ok",
             ),

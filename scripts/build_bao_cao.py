@@ -862,9 +862,11 @@ TBL(
     caption='Bảng 3.2. Tốc độ gió trung bình tháng tại Côn Đảo (NASA POWER)')
 
 P('Cơ cấu phụ tải gồm ba nhóm tổng công suất đặt 783,1 kW được liệt kê trong Bảng 3.3, trong đó nhóm cơ sở lưu trú KT '
-  'chiếm 79,8 % công suất đặt, nhóm hiện trạng 15,1 % và nhóm CS 5,1 % (Bảng 3.3). Với đồ thị tải Community trong HOMER Pro '
-  '(Hình 3.7) và khảo sát độ nhạy k_{tải} = 0,50–0,60 (tương ứng 9.397–11.277 kWh/ngày), hệ số tải 0,55 (10.336,9 kWh/ngày) '
-  'được chọn thống nhất cho các tính toán tiếp theo. Các thông số kinh tế đầu vào của dự án cho trong Bảng 3.4 [1].')
+  'chiếm 79,8 % công suất đặt, nhóm hiện trạng 15,1 % và nhóm CS 5,1 % (Bảng 3.3). Trên HOMER Pro, phụ tải giờ thực tế '
+  '(January Profile, Hình 3.7) được khai báo trực tiếp theo quy mô tải đảo từ 230–245 kW ban đêm đến 620–640 kW vào giờ cao điểm tối '
+  'cùng nhiễu ngẫu nhiên 3 % ngày và 5 % giờ, cho sản lượng trung bình 10.337 kWh/ngày (430,71 kW), đỉnh năm 748,17 kW (≤ 783,1 kW) '
+  'và hệ số tải k_{tải} = 0,58; giải tích sử dụng hệ số bảo thủ k_{tải} = 0,55 (10.336,9 kWh/ngày) với khảo sát độ nhạy k_{tải} = 0,50–0,60 '
+  '(9.397–11.277 kWh/ngày). Các thông số kinh tế đầu vào của dự án cho trong Bảng 3.4 [1].')
 TBL(
     ['Nhóm phụ tải', 'Công suất đặt (kW)', 'Tỷ trọng (%)', 'Đặc điểm sử dụng'],
     [
@@ -875,7 +877,7 @@ TBL(
     ],
     widths=[4.0, 3.2, 2.8, 6.0],
     caption='Bảng 3.3. Cơ cấu phụ tải của hệ thống ST – Giai đoạn 3')
-IMG('homer_load_crop.png', 'Hình 3.7. Khai báo đồ thị phụ tải giờ (January Profile) trên HOMER Pro', width_cm=7.6)
+IMG('homer_load_crop.png', 'Hình 3.7. Khai báo đồ thị phụ tải giờ (January Profile, Peak 748,17 kW) trên HOMER Pro', width_cm=15.5)
 TBL(
     ['Thông số', 'Giá trị', 'Ghi chú'],
     [
@@ -1155,9 +1157,9 @@ _fuel_cut_pct = 100.0 * (1.0 - _opt['fuel_l'] / _base['fuel_l'])
 _npc_cut_pct = 100.0 * (1.0 - _opt['npc'] / _base['npc'])
 _cap_cut_orig = 100.0 * (1.0 - _opt['capex'] / HOMER['capital_cost'])
 
-P('Để khắc phục hai điểm nghẽn nêu trên, mô hình đã được hiệu chỉnh trực tiếp và chạy tối ưu hóa trên phần mềm HOMER Pro x64 '
-  'phiên bản 3.18.5 [1]: (i) đặt ràng buộc thiếu công suất hằng năm bằng 0 %; (ii) mở dải biến tần '
-  'Converter 0–1.200 kW, dàn PV 0–1.200 kWp và cụm BESS 20–117 khối; (iii) thay tuabin 2.000 kW quá cỡ bằng tổ hợp 0–2 tuabin '
+P('Để khắc phục hai điểm nghẽn nêu trên, mô hình đã được hiệu chỉnh trực tiếp (kèm đồ thị phụ tải giờ 230–640 kW, đỉnh 748,17 kW ≤ 783,1 kW) '
+  'và chạy tối ưu hóa trên phần mềm HOMER Pro x64 phiên bản 3.18.5 [1]: (i) đặt ràng buộc thiếu công suất hằng năm bằng 0 %; (ii) mở dải biến tần '
+  'Converter 0–1.200 kW, dàn PV 0–1.600 kWp và cụm BESS 20–117 khối; (iii) thay tuabin 2.000 kW quá cỡ bằng tổ hợp 0–2 tuabin '
   'Windflow 45 [500 kW] (cao trình trục 47 m, giữ nguyên suất đầu tư 1.923 USD/kW); và (iv) bổ sung máy phát diesel dự phòng '
   'tự chọn cỡ (Autosize Genset) gánh các ngày lặng gió tháng 4–5. Kết quả chạy trên HOMER Pro v3.18.5 được thể hiện ở Hình 3.13 '
   'và Hình 3.14.')
@@ -1165,16 +1167,16 @@ IMG('homer_opt_table.png', 'Hình 3.13. Bảng kết quả tối ưu hóa cấu 
 IMG('homer_opt_summary.png', 'Hình 3.14. Biểu đồ dòng tiền tích lũy 25 năm và so sánh kinh tế với Base Case trên HOMER Pro', width_cm=15.5)
 
 P('Trong tổng số %d cấu hình khảo sát có %d phương án khả thi và %d phương án đạt đồng thời chỉ tiêu 0,00 %% thiếu tải và '
-  '≤ 10 %% điện năng dư (Bảng 3.20). Cần phân biệt rõ: phương án có NPC nhỏ nhất toàn cục trong Hình 3.13 là tổ hợp 1.200 kWp PV + '
+  '≤ 10 %% điện năng dư (Bảng 3.20). Cần phân biệt rõ: phương án có NPC nhỏ nhất toàn cục trong Hình 3.13 là tổ hợp %d kWp PV + '
   '%d × 500 kW gió + %d khối BESS + %d kW diesel + %d kW Converter (chiến lược LF) với NPC %s triệu USD và LCOE %s USD/kWh, '
   'nhưng vẫn phát dư tới %s %% sản lượng do dùng 2 tuabin gió [1]. Ngược lại, khi chọn phương án đứng đầu nhóm đạt chuẩn kỹ thuật '
-  '(Bảng 3.20): %d kWp PV + %d × 500 kW Windflow 45 + %d khối BESS (%s kWh) + %d kW Diesel + %d kW Converter (LF), hệ thống đạt đồng thời '
+  '(Bảng 3.20): %s kWp PV + %d × 500 kW Windflow 45 + %d khối BESS (%s kWh) + %d kW Diesel + %d kW Converter (LF), hệ thống đạt đồng thời '
   '%s %% thiếu tải và chỉ %s %% điện dư (≤ 10 %%), tỷ lệ tái tạo RF = %s %%, NPC = %s triệu USD, LCOE = %s USD/kWh với IRR = %s %% '
   'và thời gian hoàn vốn đơn giản %s năm so với phương án chạy diesel thuần túy (Base Case) [1].' % (
       _cnt['total'], _cnt['feasible'], _cnt['gvhd_ok'],
-      int(_low_all['wind_qty']), int(_low_all['bess_qty']), int(_low_all['gen_kw']), int(_low_all['conv_kw']),
+      int(_low_all['pv_kw']), int(_low_all['wind_qty']), int(_low_all['bess_qty']), int(_low_all['gen_kw']), int(_low_all['conv_kw']),
       vn(_low_all['npc'] / 1e6, 2), vn(_low_all['coe'], 4), vn(_low_all['excess_pct'], 2),
-      int(_opt['pv_kw']), int(_opt['wind_qty']), int(_opt['bess_qty']), vn(_opt['bess_qty'] * 100, 0),
+      vn(_opt['pv_kw'], 0), int(_opt['wind_qty']), int(_opt['bess_qty']), vn(_opt['bess_qty'] * 100, 0),
       int(_opt['gen_kw']), int(_opt['conv_kw']),
       vn(_opt['unmet_pct'], 2), vn(_opt['excess_pct'], 2), vn(_opt['rf_pct'], 1),
       vn(_opt['npc'] / 1e6, 2), vn(_opt['coe'], 4), vn(_opt['irr'], 1), vn(_opt['simple_payback'], 2)))
@@ -1202,39 +1204,46 @@ P('Để đánh giá đầy đủ hiệu quả trước và sau hiệu chỉnh, 
 TBL(
     ['Trụ cột', 'Chỉ tiêu chính', 'Base Case Diesel', 'Cấu hình ban đầu (Bảng 3.18)', 'Cấu hình chọn HOMER Pro (Bảng 3.20)'],
     [
-        ['Kỹ thuật', 'Cấu hình nguồn chính', '970 kW Diesel + 20 BESS (CC)', '213,2 kWp PV + 2 MW Gió + 117 BESS', '1.200 kWp PV + 500 kW Gió + 60 BESS + 970 kW Diesel (LF)'],
-        ['', 'Đáp ứng / Thiếu tải', '100 % (0,00 % thiếu)', '82,0 % (thiếu 18,0 %)', '100,0 % (0,00 % thiếu)'],
-        ['', 'Điện dư cắt giảm (%)', '0,00 %', '58,4 % (không đạt ≤ 10 %)', '6,15 % (đạt chuẩn ≤ 10 %)'],
-        ['', 'Tỷ lệ tái tạo (RF)', '0,0 %', '100 % (cắt giảm 4,43 GWh/năm)', '78,9 % (cấp đủ 3,77 GWh/năm)'],
-        ['Kinh tế', 'Vốn đầu tư (CAPEX)', '1,19 triệu USD', '7,08 triệu USD', '5,95 triệu USD (giảm 16,0 % so cấu hình ban đầu)'],
-        ['', 'Chi phí vòng đời (NPC)', '19,46 triệu USD', '9,40 triệu USD (thiếu tải)', '11,54 triệu USD (giảm 40,7 % so Base Case)'],
-        ['', 'Chi phí điện quy dẫn (COE)', '0,3990 USD/kWh', '0,2351 USD/kWh', '0,2367 USD/kWh (giảm 40,7 % so Base Case)'],
-        ['Môi trường', 'Tiêu thụ dầu diesel', '1.054.193 L/năm', '0 L/năm', '226.143 L/năm (giảm 78,5 % so Base Case)'],
-        ['', 'Phát thải CO₂ / Giảm trừ', '2.759,5 tấn/năm', '0 tấn/năm (tránh 2.289 tấn/năm)', '592,0 tấn/năm (giảm 2.167,5 tấn/năm) [1], [12]'],
+        ['Kỹ thuật', 'Cấu hình nguồn chính', '%d kW Diesel + %d BESS (%s)' % (int(_base['gen_kw']), int(_base['bess_qty']), _base['dispatch']), '213,2 kWp PV + 2 MW Gió + 117 BESS', '%s kWp PV + %d×500 kW Gió + %d BESS + %d kW Diesel (%s)' % (vn(_opt['pv_kw'], 0), int(_opt['wind_qty']), int(_opt['bess_qty']), int(_opt['gen_kw']), _opt['dispatch'])],
+        ['', 'Đáp ứng / Thiếu tải', '100 % (0,00 % thiếu)', '82,0 % (thiếu 18,0 %)', '100,0 %% (%s %% thiếu)' % vn(_opt['unmet_pct'], 2)],
+        ['', 'Điện dư cắt giảm (%)', '0,00 %', '58,4 % (không đạt ≤ 10 %)', '%s %% (đạt chuẩn ≤ 10 %%)' % vn(_opt['excess_pct'], 2)],
+        ['', 'Tỷ lệ tái tạo (RF)', '0,0 %', '100 % (cắt giảm 4,43 GWh/năm)', '%s %% (cấp đủ 3,77 GWh/năm)' % vn(_opt['rf_pct'], 1)],
+        ['Kinh tế', 'Vốn đầu tư (CAPEX)', '%s triệu USD' % vn(_base['capex'] / 1e6, 2), '7,08 triệu USD', '%s triệu USD (giảm %s %% so cấu hình ban đầu)' % (vn(_opt['capex'] / 1e6, 2), vn(_cap_cut_orig, 1))],
+        ['', 'Chi phí vòng đời (NPC)', '%s triệu USD' % vn(_base['npc'] / 1e6, 2), '9,40 triệu USD (thiếu tải)', '%s triệu USD (giảm %s %% so Base Case)' % (vn(_opt['npc'] / 1e6, 2), vn(_npc_cut_pct, 1))],
+        ['', 'Chi phí điện quy dẫn (COE)', '%s USD/kWh' % vn(_base['coe'], 4), '0,2351 USD/kWh', '%s USD/kWh (giảm %s %% so Base Case)' % (vn(_opt['coe'], 4), vn(_npc_cut_pct, 1))],
+        ['Môi trường', 'Tiêu thụ dầu diesel', '%s L/năm' % vn(_base['fuel_l'], 0), '0 L/năm', '%s L/năm (giảm %s %% so Base Case)' % (vn(_opt['fuel_l'], 0), vn(_fuel_cut_pct, 1))],
+        ['', 'Phát thải CO₂ / Giảm trừ', '%s tấn/năm' % vn(_base['co2_kg'] / 1000.0, 1), '0 tấn/năm (tránh 2.289 tấn/năm)', '%s tấn/năm (giảm %s tấn/năm) [1], [12]' % (vn(_opt['co2_kg'] / 1000.0, 1), vn(_co2_saved_base, 1))],
     ],
     widths=[2.0, 3.0, 3.3, 3.5, 4.2],
     caption='Bảng 3.21. Đánh giá tổng hợp hiệu quả Kỹ thuật – Kinh tế – Môi trường trên HOMER Pro v3.18.5')
 
-P('Về hiệu quả kỹ thuật: cấu hình đề xuất từ HOMER Pro v3.18.5 (1.200 kWp PV + 500 kW gió + 6.000 kWh BESS + 970 kW diesel + '
-  '800 kW Converter, Bảng 3.20) loại bỏ hoàn toàn hai nhược điểm của mô hình ban đầu: nâng tỷ lệ đáp ứng từ 82,0 % lên 100,0 % (0,00 % thiếu '
-  'so với tải đỉnh 783,1 kW) và giảm tỷ lệ điện dư từ 58,4 % xuống còn 6,15 % (260.422 kWh/năm, đạt ngưỡng ≤ 10 %, Bảng 3.21). Hệ pin '
-  '60 khối (6.000 kWh) cung cấp thời gian tự chủ 11,14 giờ và luân chuyển 961.779 kWh/năm, giúp san bằng dao động ngày – đêm hiệu quả [1].')
+P('Về hiệu quả kỹ thuật: cấu hình đề xuất từ HOMER Pro v3.18.5 (%s kWp PV + %d × 500 kW gió + %s kWh BESS + %d kW diesel + '
+  '%d kW Converter, Bảng 3.20) loại bỏ hoàn toàn hai nhược điểm của mô hình ban đầu: nâng tỷ lệ đáp ứng từ 82,0 %% lên 100,0 %% (%s %% thiếu '
+  'so với phụ tải đỉnh thực tế 748,17 kW trong dải 783,1 kW) và giảm tỷ lệ điện dư từ 58,4 %% xuống còn %s %% (%s kWh/năm, đạt ngưỡng ≤ 10 %%, Bảng 3.21). Hệ pin '
+  '%d khối (%s kWh) cung cấp thời gian tự chủ %s giờ và luân chuyển %s kWh/năm, giúp san bằng dao động ngày – đêm hiệu quả [1].' % (
+      vn(_opt['pv_kw'], 0), int(_opt['wind_qty']), vn(_opt['bess_qty'] * 100, 0), int(_opt['gen_kw']), int(_opt['conv_kw']),
+      vn(_opt['unmet_pct'], 2), vn(_opt['excess_pct'], 2), vn(_opt['excess_kwh'], 0),
+      int(_opt['bess_qty']), vn(_opt['bess_qty'] * 100, 0), vn(_opt['bess_autonomy'], 2), vn(_opt['bess_throughput'], 0)))
 P('Về hiệu quả kinh tế: so với cấu hình ban đầu chưa hiệu chỉnh, vốn đầu tư ban đầu giảm %s %% từ 7,08 triệu USD xuống còn %s triệu USD '
-  '(Bảng 3.21) do cắt giảm dung lượng BESS từ 117 xuống 60 khối và thu gọn tuabin gió xuống 500 kW. So với Base Case chạy diesel tại đảo '
+  '(Bảng 3.21) do cắt giảm dung lượng BESS từ 117 xuống %d khối và thu gọn tuabin gió xuống 500 kW. So với Base Case chạy diesel tại đảo '
   '(NPC %s triệu USD, LCOE %s USD/kWh, chi phí vận hành %s triệu USD/năm), cấu hình Hybrid đạt NPC %s triệu USD (giảm %s %%), '
-  'LCOE %s USD/kWh (≈ 5.918 VNĐ/kWh, thấp hơn gần một nửa chi phí phát diesel tham chiếu [11]), giá trị hiện tại ròng (Present Worth) '
+  'LCOE %s USD/kWh (≈ %s VNĐ/kWh, thấp hơn gần một nửa chi phí phát diesel tham chiếu [11]), giá trị hiện tại ròng (Present Worth) '
   '%s triệu USD, IRR %s %% và hoàn vốn giản đơn chỉ %s năm (Hình 3.14) [1].' % (
-      vn(_cap_cut_orig, 1), vn(_opt['capex'] / 1e6, 2),
+      vn(_cap_cut_orig, 1), vn(_opt['capex'] / 1e6, 2), int(_opt['bess_qty']),
       vn(_base['npc'] / 1e6, 2), vn(_base['coe'], 4), vn(_base['operating_cost'] / 1e6, 2),
-      vn(_opt['npc'] / 1e6, 2), vn(_npc_cut_pct, 1), vn(_opt['coe'], 4),
+      vn(_opt['npc'] / 1e6, 2), vn(_npc_cut_pct, 1), vn(_opt['coe'], 4), vn(_opt['coe'] * 25000.0, 0),
       vn(_opt['present_worth'] / 1e6, 2), vn(_opt['irr'], 1), vn(_opt['simple_payback'], 2)))
 P('Về hiệu quả môi trường: kết quả tính toán từ mô-đun phát thải của phần mềm HOMER Pro cho thấy '
   'lượng dầu diesel tiêu thụ giảm %s %% từ %s L/năm xuống còn %s L/năm; tương ứng lượng CO₂ phát thải giảm từ %s tấn/năm xuống '
-  'còn %s tấn/năm, tức tránh được %s tấn CO₂/năm (giảm 78,5 %%, Bảng 3.21) [1], [12]. Đồng thời các chất ô nhiễm độc hại tại chỗ '
-  'như NOₓ giảm từ 16.340 xuống 3.505 kg/năm, SO₂ giảm từ 6.757 xuống 1.450 kg/năm, CO giảm từ 17.394 xuống 3.731 kg/năm và '
-  'bụi PM giảm từ 105,4 xuống 22,6 kg/năm, góp phần bảo vệ hệ sinh thái Vườn quốc gia Côn Đảo.' % (
+  'còn %s tấn/năm, tức tránh được %s tấn CO₂/năm (giảm %s %%, Bảng 3.21) [1], [12]. Đồng thời các chất ô nhiễm độc hại tại chỗ '
+  'như NOₓ giảm từ %s xuống %s kg/năm, SO₂ giảm từ %s xuống %s kg/năm, CO giảm từ %s xuống %s kg/năm và '
+  'bụi PM giảm từ %s xuống %s kg/năm, góp phần bảo vệ hệ sinh thái Vườn quốc gia Côn Đảo.' % (
       vn(_fuel_cut_pct, 1), vn(_base['fuel_l'], 0), vn(_opt['fuel_l'], 0),
-      vn(_base['co2_kg'] / 1000.0, 1), vn(_opt['co2_kg'] / 1000.0, 1), vn(_co2_saved_base, 1)))
+      vn(_base['co2_kg'] / 1000.0, 1), vn(_opt['co2_kg'] / 1000.0, 1), vn(_co2_saved_base, 1), vn(_fuel_cut_pct, 1),
+      vn(_base['nox_kg'], 0), vn(_opt['nox_kg'], 0),
+      vn(_base['so2_kg'], 0), vn(_opt['so2_kg'], 0),
+      vn(_base['co_kg'], 0), vn(_opt['co_kg'], 0),
+      vn(_base['pm_kg'], 1), vn(_opt['pm_kg'], 1)))
 
 # ===================== CHUONG 6 =====================
 H('KẾT LUẬN VÀ KIẾN NGHỊ', 1)
@@ -1247,11 +1256,17 @@ for it in [
     'Phân tích từ phần mềm HOMER Pro chỉ ra nguyên nhân cấu hình ban đầu (213,2 kWp PV + 2.000 kW gió + '
     '11.700 kWh BESS + 100 kW Converter) không đạt chuẩn vận hành: thiếu tải 18,0 % (679.837 kWh/năm) do nghẽn Converter 100 kW và '
     'dư điện tới 58,4 % (4.426.778 kWh/năm) do tuabin gió 2.000 kW vượt gấp đôi nhu cầu phụ tải 3,77 GWh/năm (Bảng 3.18);',
-    'Kết quả mô phỏng tối ưu trực tiếp trên HOMER Pro x64 v3.18.5 (450/454 phương án khả thi, Hình 3.13) chứng minh 288 cấu hình đạt đồng thời '
-    '0,00 % thiếu tải và ≤ 10 % điện dư; trong đó phương án dẫn đầu theo NPC gồm 1.200 kWp PV + 1 × 500 kW Windflow 45 + 60 khối BESS '
-    '(6.000 kWh) + 970 kW diesel dự phòng + 800 kW Converter (LF) đạt 0,00 % thiếu tải, 6,15 % điện dư và tỷ lệ tái tạo 78,9 % (Bảng 3.20);',
-    'So với Base Case diesel (19,46 triệu USD, LCOE 0,3990 USD/kWh, Bảng 3.21), phương án tối ưu giảm 40,7 % NPC (còn 11,54 triệu USD) và '
-    'LCOE (còn 0,2367 USD/kWh), đạt IRR 18,9 %, hoàn vốn 5,02 năm (Hình 3.14), cắt giảm 78,5 % nhiên liệu và tránh phát thải 2.167,5 tấn CO₂/năm [1], [12].',
+    'Kết quả mô phỏng tối ưu trực tiếp trên HOMER Pro x64 v3.18.5 (%d/%d phương án khả thi, Hình 3.13) chứng minh %d cấu hình đạt đồng thời '
+    '0,00 %% thiếu tải và ≤ 10 %% điện dư; trong đó phương án dẫn đầu đạt chuẩn gồm %s kWp PV + %d × 500 kW Windflow 45 + %d khối BESS '
+    '(%s kWh) + %d kW diesel dự phòng + %d kW Converter (%s) đạt %s %% thiếu tải, %s %% điện dư và tỷ lệ tái tạo %s %% (Bảng 3.20);' % (
+        _cnt['feasible'], _cnt['total'], _cnt['gvhd_ok'],
+        vn(_opt['pv_kw'], 0), int(_opt['wind_qty']), int(_opt['bess_qty']), vn(_opt['bess_qty'] * 100, 0),
+        int(_opt['gen_kw']), int(_opt['conv_kw']), _opt['dispatch'],
+        vn(_opt['unmet_pct'], 2), vn(_opt['excess_pct'], 2), vn(_opt['rf_pct'], 1)),
+    'So với Base Case diesel (%s triệu USD, LCOE %s USD/kWh, Bảng 3.21), phương án tối ưu giảm %s %% NPC (còn %s triệu USD) và '
+    'LCOE (còn %s USD/kWh), đạt IRR %s %%, hoàn vốn %s năm (Hình 3.14), cắt giảm %s %% nhiên liệu và tránh phát thải %s tấn CO₂/năm [1], [12].' % (
+        vn(_base['npc'] / 1e6, 2), vn(_base['coe'], 4), vn(_npc_cut_pct, 1), vn(_opt['npc'] / 1e6, 2),
+        vn(_opt['coe'], 4), vn(_opt['irr'], 1), vn(_opt['simple_payback'], 2), vn(_fuel_cut_pct, 1), vn(_co2_saved_base, 1)),
 ]:
     p = doc.add_paragraph(it, style='List Bullet')
     p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
@@ -1263,8 +1278,8 @@ P('Từ các kết quả mô phỏng đã xác thực trên phần mềm HOMER P
   'khi triển khai kỹ thuật tại thực địa Côn Đảo:')
 for it in [
     'Đo kiểm thực địa chuỗi tốc độ gió tại cao trình lắp đặt 47 m và đồ thị phụ tải theo mùa của nhóm cơ sở lưu trú KT nhằm hiệu chỉnh sai số số liệu vệ tinh NASA;',
-    'Thực hiện phân tích độ nhạy theo giá dầu diesel, suất đầu tư pin LFP và lãi suất chiết khấu thực r trong dải ±20 % trên mô hình HOMER Pro;',
-    'Khảo sát bố trí phụ tải điều độ linh hoạt (trạm khử mặn nước biển, trạm sạc xe điện) để tận dụng nốt phần điện dư 6,15 % (260,4 MWh/năm) [1];',
+    'Thực hiện phân tích độ nhạy theo giá dầu diesel, suất đầu tư pin LFP và lãi suất chiết khấu thực r trong dải ±20 %% trên mô hình HOMER Pro;',
+    'Khảo sát bố trí phụ tải điều độ linh hoạt (trạm khử mặn nước biển, trạm sạc xe điện) để tận dụng nốt phần điện dư %s %% (%s MWh/năm) [1];' % (vn(_opt['excess_pct'], 2), vn(_opt['excess_kwh'] / 1000.0, 1)),
     'Đánh giá chi tiết phương án chống ăn mòn muối biển và thiết kế bảo vệ rơle – tự động hóa chuyển nguồn giữa cụm BESS, PV, tuabin gió và máy phát dự phòng.',
 ]:
     p = doc.add_paragraph(it, style='List Bullet')
